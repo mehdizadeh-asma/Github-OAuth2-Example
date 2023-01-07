@@ -4,7 +4,7 @@
   "description": "Greple-Github-Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -L dist/app.js", 
+    "start": "nodemon -L dist/app.js",
     "build": "tsc -w",
     "test": "jest",
     "lint": "eslint"
@@ -38,6 +38,8 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "@octokit/auth-oauth-user": "^2.0.4",
+    "@octokit/core": "^4.1.0",
     "body-parser": "^1.20.1",
     "express": "^4.18.2",
     "mongoose": "^6.8.2"
