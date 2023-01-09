@@ -41,7 +41,7 @@ describe("Get User", () => {
       },
       headers: [
         {
-          Authorization: "",
+          authorization: "",
         },
       ],
     };
@@ -57,7 +57,7 @@ describe("Get User", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "jhjh hjhj",
+        authorization: "jhjh hjhj",
       },
     };
 
@@ -72,7 +72,7 @@ describe("Get User", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "Bearer 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",
+        authorization: "Bearer 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",
       },
     };
 
@@ -102,7 +102,7 @@ describe("Get Gists", () => {
       },
       headers: [
         {
-          Authorization: "",
+          authorization: "",
         },
       ],
     };
@@ -118,7 +118,7 @@ describe("Get Gists", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "jhjh hjhj",
+        authorization: "jhjh hjhj",
       },
     };
 
@@ -133,7 +133,7 @@ describe("Get Gists", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "Bearer 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",
+        authorization: "Bearer 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",
       },
     };
 
@@ -163,7 +163,7 @@ describe("Get Repos", () => {
       },
       headers: [
         {
-          Authorization: "",
+          authorization: "",
         },
       ],
     };
@@ -179,7 +179,7 @@ describe("Get Repos", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "jhjh hjhj",
+        authorization: "jhjh hjhj",
       },
     };
 
@@ -194,7 +194,7 @@ describe("Get Repos", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "Bearer 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",
+        authorization: "Bearer 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",
       },
     };
 
@@ -224,7 +224,7 @@ describe("Get Orgs", () => {
       },
       headers: [
         {
-          Authorization: "",
+          authorization: "",
         },
       ],
     };
@@ -240,7 +240,7 @@ describe("Get Orgs", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "jhjh hjhj",
+        authorization: "jhjh hjhj",
       },
     };
 
@@ -255,7 +255,7 @@ describe("Get Orgs", () => {
         username: "mehdizadeh-asma",
       },
       headers: {
-        Authorization: "Bearer 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",
+        authorization: "Bearer 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",
       },
     };
 
