@@ -28,16 +28,18 @@ class UserController {
       const username = req.params.username;
 
       if (!username || username === "") throw new Error("Invalid Username");
+      console.log("headers");
 
-      if (!req.headers["Authorization"] || req.headers["Authorization"] === "")
+      console.log(req.headers);
+
+      if (!req.headers["authorization"] || req.headers["authorization"] === "")
         throw new Error("Invalid Authorization");
 
       const token = Helper.ExtractToken(
-        req.headers["Authorization"].toString()
+        req.headers["authorization"].toString()
       );
 
       if (token === "") throw new Error("Invalid Token");
-      //  token = "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";
 
       const octokit = new Octokit({
         auth: token,
@@ -59,15 +61,14 @@ class UserController {
 
       if (!username || username === "") throw new Error("Invalid Username");
 
-      if (!req.headers["Authorization"] || req.headers["Authorization"] === "")
+      if (!req.headers["authorization"] || req.headers["authorization"] === "")
         throw new Error("Invalid Authorization");
 
       const token = Helper.ExtractToken(
-        req.headers["Authorization"].toString()
+        req.headers["authorization"].toString()
       );
 
       if (token === "") throw new Error("Invalid Token");
-      //  token = "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";
 
       const octokit = new Octokit({
         auth: token,
@@ -88,15 +89,14 @@ class UserController {
 
       if (!username || username === "") throw new Error("Invalid Username");
 
-      if (!req.headers["Authorization"] || req.headers["Authorization"] === "")
+      if (!req.headers["authorization"] || req.headers["authorization"] === "")
         throw new Error("Invalid Authorization");
 
       const token = Helper.ExtractToken(
-        req.headers["Authorization"].toString()
+        req.headers["authorization"].toString()
       );
 
       if (token === "") throw new Error("Invalid Token");
-      //  token = "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";
 
       const octokit = new Octokit({
         auth: token,
@@ -117,15 +117,14 @@ class UserController {
 
       if (!username || username === "") throw new Error("Invalid Username");
 
-      if (!req.headers["Authorization"] || req.headers["Authorization"] === "")
+      if (!req.headers["authorization"] || req.headers["authorization"] === "")
         throw new Error("Invalid Authorization");
 
       const token = Helper.ExtractToken(
-        req.headers["Authorization"].toString()
+        req.headers["authorization"].toString()
       );
 
       if (token === "") throw new Error("Invalid Token");
-      //  token = "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";
 
       const octokit = new Octokit({
         auth: token,
