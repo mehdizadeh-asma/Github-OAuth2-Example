@@ -55,6 +55,34 @@ class UserController {
     }
   };
 
+  static GetOrgs: RequestHandler = async (req, res, next) => {
+    try {
+      const username = req.params.username;
+
+      if (!username || username === "") throw new Error("Invalid Username");
+
+      if (!req.headers["authorization"] || req.headers["authorization"] === "")
+        throw new Error("Invalid Authorization");
+
+      const token = Helper.ExtractToken(
+        req.headers["authorization"].toString()
+      );
+
+      if (token === "") throw new Error("Invalid Token");
+
+      const octokit = new Octokit({
+        auth: token,
+      });
+
+      const result = await octokit.request(`GET /users/${username}/orgs`, {
+        username: username,
+      });
+      res.status(200).json(result.data);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   static GetGists: RequestHandler = async (req, res, next) => {
     try {
       const username = req.params.username;
@@ -104,34 +132,6 @@ class UserController {
 
       const result = await octokit.request(`GET /users/${username}/repos`, {
         username: username,
-      });
-      res.status(200).json(result.data);
-    } catch (error) {
-      next(error);
-    }
-  };
-
-  static GetOrgs: RequestHandler = async (req, res, next) => {
-    try {
-      const username = req.params.username;
-
-      if (!username || username === "") throw new Error("Invalid Username");
-
-      if (!req.headers["authorization"] || req.headers["authorization"] === "")
-        throw new Error("Invalid Authorization");
-
-      const token = Helper.ExtractToken(
-        req.headers["authorization"].toString()
-      );
-
-      if (token === "") throw new Error("Invalid Token");
-
-      const octokit = new Octokit({
-        auth: token,
-      });
-
-      const result = await octokit.request(`GET /users/${username}/orgs`, {
-        username: "mojombo",
       });
       res.status(200).json(result.data);
     } catch (error) {
