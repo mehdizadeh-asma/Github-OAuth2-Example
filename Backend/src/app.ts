@@ -6,22 +6,20 @@ import express, {
 } from "express";
 import bodyParser from "body-parser";
 
+import cors from "cors";
+
 import userRouter from "./routes/UserRouter";
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.use("/api", userRouter);
+const corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200,
+};
 
-app.use((_req: Request, res: Response, next: NextFunction) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  res.header("Access-Control-Allow-Headers", "Authorization");
-
-  next();
-});
+app.use("/api", cors(corsOptions), userRouter);
 
 app.use(
   (
