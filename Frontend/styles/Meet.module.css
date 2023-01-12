@@ -1,0 +1,15 @@
+.redirectMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgb(107, 101, 107),
+    rgb(200, 186, 200),
+    rgb(221, 205, 221),
+    rgb(200, 186, 200)
+  );
+}
