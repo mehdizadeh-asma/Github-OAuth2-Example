@@ -8,15 +8,42 @@ import Helper from "../utils/Helper";
 class UserController {
   static authorizeUser: RequestHandler = async (req, res, next) => {
     try {
+      const code = req.params.code;
+
+      if (!code || code === "") throw new Error("Invalid Code");
+
       const auth = createOAuthUserAuth({
         clientId: "648e6c81597252d33496",
         clientSecret: "08a3ab86fe84c1795f539239802e8ece59129882",
-        code: req.query.code?.toString() ?? "",
+        code: code,
         redirectUrl: "",
       });
 
       const { token } = await auth();
       res.status(200).json({ token: token });
+    } catch (error) {
+      next(error);
+    }
+  };
+  static GetAuthenticatedUser: RequestHandler = async (req, res, next) => {
+    try {
+
+      if (!req.headers["authorization"] || req.headers["authorization"] === "")
+        throw new Error("Invalid Authorization");
+
+      const token = Helper.ExtractToken(
+        req.headers["authorization"].toString()
+      );
+
+      if (token === "") throw new Error("Invalid Token");
+
+      const octokit = new Octokit({
+        auth: token,
+      });
+
+      const result = await octokit.request(`GET /user`);
+
+      res.status(200).json(result.data);
     } catch (error) {
       next(error);
     }
