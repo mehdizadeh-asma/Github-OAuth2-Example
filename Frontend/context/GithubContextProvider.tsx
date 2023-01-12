@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import GithubContext, { GithubContextType } from "../context/app-context";
 
-const GithubContextProvider = (props: React.ReactNode) => {
+interface PropsType {
+  children: ReactNode;
+}
+const GithubContextProvider = (props: PropsType) => {
   const context: GithubContextType = {};
 
   const [ctx, setCtx] = useState(context);

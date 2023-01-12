@@ -18,12 +18,12 @@ const OverviewItem: React.FC<propsType> = (props) => {
       {props.OneCol ? (
         <div className="row w-100 d-inline-flex h6vh align-items-center">
           {props.ContentOne ? (
-            <div className="col-md-12 d-flex flex-row ">
+            <div className=" d-flex flex-row ">
               <FontAwesomeIcon
                 className="OverviewAwsomeIcon  "
                 icon={props.IconOne}
               />
-              <div className="fontsize08rem  col-md-11">{props.ContentOne}</div>
+              <div className="fontsize08rem ">{props.ContentOne}</div>
             </div>
           ) : (
             ""
@@ -32,18 +32,18 @@ const OverviewItem: React.FC<propsType> = (props) => {
       ) : (
         <div className="row w-100  d-inline-flex h6vh align-items-center">
           {props.ContentOne ? (
-            <div className="col-md-6 d-flex flex-row text-red ">
+            <div className="col-md-6 d-flex flex-row  ">
               <FontAwesomeIcon
                 className="OverviewAwsomeIcon  "
                 icon={props.IconOne}
               />
-              <div className="fontsize08rem  col-md-11">{props.ContentOne}</div>
+              <div className="fontsize08rem   ">{props.ContentOne}</div>
             </div>
           ) : (
             ""
           )}
           {props.ContentTwo ? (
-            <div className="col-md-6 d-flex flex-row text-red  ">
+            <div className="col-md-6 d-flex flex-row   ">
               <FontAwesomeIcon
                 className="OverviewAwsomeIcon "
                 icon={props.IconTwo}

@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
   useEffect,
+  ReactNode,
 } from "react";
 import RoundedProfile from "../UI/RoundedProfile";
 import Card from "react-bootstrap/Card";
@@ -15,7 +16,10 @@ import GithubContext from "../../context/app-context";
 import githubUsernameRegex from "github-username-regex";
 import { useRouter } from "next/router";
 
-const ProfileContainer: React.FC = (props) => {
+interface PropsType {
+  children: ReactNode;
+}
+const ProfileContainer = (props: PropsType) => {
   const ctx = useContext(GithubContext);
 
   const router = useRouter();
@@ -51,14 +55,17 @@ const ProfileContainer: React.FC = (props) => {
 
       const searchedGists = await UserController.GetGists(ctx.Token, username);
 
-      ctx.SetData({
-        User: searchedUser,
-        Orgs: searchedOrgs,
-        Gists: searchedGists,
-        Repos: searchedRepos,
-      });
+      if (ctx.SetData)
+        ctx.SetData({
+          User: searchedUser,
+          Orgs: searchedOrgs,
+          Gists: searchedGists,
+          Repos: searchedRepos,
+        });
+      else setErrorText("Context is undefined");
+
       setErrorText("");
-    } catch (error) {
+    } catch (error: any) {
       setErrorText(error.toString());
     }
   };

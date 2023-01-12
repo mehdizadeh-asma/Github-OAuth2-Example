@@ -13,71 +13,74 @@ const Dashboard = () => {
   const ctx = useContext(GithubContext);
 
   return (
-    <div className="row container my-3">
+    <div className="row container my-3 NavResponsive ">
       <Tab.Container defaultActiveKey="view">
         <Row className="w-100  px-3">
-          <Col className="">
-            <Nav className="h2rem">
-              <Nav.Item className="me-2">
+          <div className="col">
+            <Nav className="h2rem  ">
+              <Nav.Item className="me-2 NavItem ">
+                {" "}
+                {/*//NavResponsive */}
                 <Nav.Link
-                  className="shadow BtnGrdOrange w30vw MainBox "
+                  className="NavLink shadow HoverRescale BtnGrdPurple  w30vw MainBox "
                   eventKey="view"
                 >
-                  <div className="row d-inline-flex w-100  ">
-                    <div className="col-1 ">
+                  <div className="row d-inline-flex text-start justify-content-start align-items-start w-100  ">
+                    <div className="w2vw TabAwsomeDiv">
                       <FontAwesomeIcon
-                        className=" text-white "
+                        className=" w105vw TabAwsomeIcon text-white "
                         // onClick={AddEventHandler}
                         icon={faUsersViewfinder}
                       />
                     </div>
-                    <div className="col-11 text-white ">
-                      <h6>
-                        <small>Profile Overview</small>
+                    <div className="w20vw text-white mx-2  ">
+                      <h6 className="w-100 ">
+                        <small className="small">Overview</small>
                       </h6>
                     </div>
                   </div>
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className="me-2">
+              <Nav.Item className="">
+                {/* NavResponsive */}
                 <Nav.Link
-                  className="shadow BtnGrdPurple w30vw MainBox "
+                  className="NavLink shadow BtnGrdPurple HoverRescale w30vw MainBox "
                   eventKey="Organization"
                 >
                   <div className="row d-inline-flex w-100  ">
-                    <div className="col-1">
+                    <div className="col-2 TabAwsomeDiv">
                       <FontAwesomeIcon
-                        className=" text-white "
+                        className=" w105vw TabAwsomeIcon text-white "
                         // onClick={AddEventHandler}
                         icon={faBoxesStacked}
                       />
                     </div>
-                    <div className="col-10 text-white ">
-                      <h6>
-                        <small>Organizations</small>
+                    <div className="col text-white  ">
+                      <h6 className="w-100 ">
+                        <small className="small">Organizations</small>
                       </h6>
                     </div>
                   </div>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
-          </Col>
+          </div>
         </Row>
         <Row
           className={
-            " w64-5vw mx-3 border border-1  hMin4vh  rounded-1 shadow colorizeLightPurple my-1 py-2"
+            " Pane w64-5vw mx-3 border border-1  hMin4vh  rounded-1 shadow colorizeLightPurple my-1 py-2"
           }
         >
-          <Col>
-            <Tab.Content>
-              <Tab.Pane eventKey="view">
+          <div className="col ">
+            <Tab.Content className="">
+              <Tab.Pane eventKey="view" className=" ">
                 <Overview MyUser={ctx.User}></Overview>
               </Tab.Pane>
-              <Tab.Pane eventKey="Organization">
+              <Tab.Pane eventKey="Organization" className=" ">
                 <Organizations MyOrgs={ctx.Orgs}></Organizations>
               </Tab.Pane>
             </Tab.Content>
-          </Col>
+          </div>
         </Row>
       </Tab.Container>
     </div>

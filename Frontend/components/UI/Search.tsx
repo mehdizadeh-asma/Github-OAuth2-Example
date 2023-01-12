@@ -1,6 +1,5 @@
 import React from "react";
 import AwsomeButton from "./AwsomeButton";
-import FloatingInput from "./FloatingInput";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";

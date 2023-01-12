@@ -1,5 +1,5 @@
 interface Gist {
-  id: String;
+  id: number;
   login: string;
   description: string;
   files?: any;

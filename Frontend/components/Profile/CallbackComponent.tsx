@@ -39,17 +39,19 @@ const CallbackComponent = () => {
           authUser.login
         );
 
-        ctx.SetData({
-          Token: token,
-          AuthenticatedUser: authUser,
-          User: authUser,
-          Orgs: searchedOrgs,
-          Gists: searchedGists,
-          Repos: searchedRepos,
-        });
+        if (ctx.SetData)
+          ctx.SetData({
+            Token: token,
+            AuthenticatedUser: authUser,
+            User: authUser,
+            Orgs: searchedOrgs,
+            Gists: searchedGists,
+            Repos: searchedRepos,
+          });
+        else throw new Error("Context is undefined");
 
         router.push("/profile");
-      } catch (error) {
+      } catch (error: any) {
         setErrorText(error.toString());
       }
     };

@@ -68,15 +68,23 @@
 }
 
 .hMin4vh {
-  min-height: 4vh;
+  min-height: 5vh;
 }
 
 .w3vw {
   width: 3vw;
 }
 
+.w105vw {
+  width: 1.5vw;
+}
+
 .w2vw {
   width: 2vw;
+}
+
+.w205vw {
+  width: 2.5vw;
 }
 
 .w4vw {
@@ -277,7 +285,144 @@
   border-radius: 3px;
 }
 
-* {
+.HoverToWhite, .HoverAndRescaleToWhite {
+  transition: transform 0.2s;
+  transition-timing-function: linear;
+}
+.HoverToWhite:hover, .HoverAndRescaleToWhite:hover {
+  color: rgb(255, 254, 248);
+  font-size: 1.04rem;
+}
+
+.HoverAndRescaleToWhite:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.HoverRescale {
+  transition: transform 0.2s;
+  transition-timing-function: linear;
+}
+.HoverRescale:hover {
+  color: rgb(255, 254, 248);
+  transform: scale(1.02, 1.02);
+}
+
+@media (min-width: 1100px) {
+  .RedirectRow {
+    width: 50%;
+  }
+  .RedirectRow .MeetBtn {
+    width: 18vw;
+  }
+}
+@media (max-width: 1100px) {
+  .RedirectRow {
+    width: 80%;
+  }
+  .RedirectRow .MeetBtn {
+    width: 30vw;
+  }
+}
+@media (max-width: 570px) {
+  .RedirectRow {
+    width: 90%;
+  }
+  .RedirectRow .MeetBtn {
+    width: 30vw;
+  }
+}
+@media (max-width: 380px) {
+  .RedirectRow {
+    width: 99%;
+  }
+  .RedirectRow .MeetBtn {
+    width: 45vw;
+  }
+}
+@media (max-width: 380px) {
+  .RedirectRow {
+    background-color: white;
+    width: 99%;
+  }
+  .RedirectRow .MeetBtn {
+    width: 45vw;
+    font-size: 0.7rem;
+  }
+  .RedirectRow .ExploreDiv {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1198px) {
+  .NavResponsive .NavLink {
+    width: 30vw;
+  }
+  .NavResponsive .Pane {
+    width: 61vw;
+  }
+}
+@media (max-width: 880px) {
+  .NavResponsive .NavLink {
+    width: 27vw;
+  }
+  .NavResponsive .NavLink .TabAwsomeDiv {
+    display: none;
+  }
+  .NavResponsive .Pane {
+    width: 55vw;
+    min-height: 40vh;
+  }
+}
+@media (max-width: 690px) {
+  .NavResponsive .NavLink {
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 630px) {
+  .NavResponsive .NavLink {
+    width: 24vw;
+  }
+  .NavResponsive .Pane {
+    width: 49vw;
+  }
+}
+@media (max-width: 630px) {
+  .NavResponsive .NavLink {
+    width: 15vw;
+  }
+  .NavResponsive .NavLink .small {
+    display: none;
+  }
+  .NavResponsive .NavLink .TabAwsomeDiv {
+    display: block;
+  }
+  .NavResponsive .NavLink .TabAwsomeIcon {
+    width: 3vw;
+  }
+  .NavResponsive .Pane {
+    width: 45vw;
+  }
+}
+@media (max-width: 385px) {
+  .NavResponsive .NavLink {
+    width: 12vw;
+  }
+  .NavResponsive .NavLink .small {
+    display: none;
+  }
+  .NavResponsive .NavLink .TabAwsomeDiv {
+    display: block;
+  }
+  .NavResponsive .NavLink .TabAwsomeIcon {
+    width: 4vw;
+  }
+  .NavResponsive .Pane {
+    width: 45vw;
+  }
+}
+
+_Responsive * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
