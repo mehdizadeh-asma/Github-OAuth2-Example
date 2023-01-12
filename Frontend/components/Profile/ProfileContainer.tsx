@@ -1,5 +1,11 @@
 import UserController from "../../controller/UserController";
-import { useRef, MutableRefObject, useContext, useState } from "react";
+import {
+  useRef,
+  MutableRefObject,
+  useContext,
+  useState,
+  useEffect,
+} from "react";
 import RoundedProfile from "../UI/RoundedProfile";
 import Card from "react-bootstrap/Card";
 import Search from "../UI/Search";
@@ -7,14 +13,21 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./Navigation";
 import GithubContext from "../../context/app-context";
 import githubUsernameRegex from "github-username-regex";
+import { useRouter } from "next/router";
 
 const ProfileContainer: React.FC = (props) => {
-  const [errorText, setErrorText] = useState("");
+  const ctx = useContext(GithubContext);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!ctx.Token) router.push("/");
+  }, [router, ctx]);
 
   const refUsernameInput =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>;
 
-  const ctx = useContext(GithubContext);
+  const [errorText, setErrorText] = useState("");
 
   const SearchHandler = async () => {
     try {
@@ -25,31 +38,25 @@ const ProfileContainer: React.FC = (props) => {
         return;
       }
 
-      const searchedUser = await UserController.GetUser(
-        refUsernameInput.current.value
-      );
+      if (!ctx.Token) {
+        setErrorText("Token Expired!");
+        return;
+      }
 
-      const searchedOrgs = await UserController.GetOrgs(
-        refUsernameInput.current.value
-      );
+      const searchedUser = await UserController.GetUser(ctx.Token, username);
 
-      const searchedRepos = await UserController.GetRepos(
-        refUsernameInput.current.value
-      );
+      const searchedOrgs = await UserController.GetOrgs(ctx.Token, username);
 
-      const searchedGists = await UserController.GetGists(
-        refUsernameInput.current.value
-      );
+      const searchedRepos = await UserController.GetRepos(ctx.Token, username);
 
-      const authuser = ctx.AuthenticatedUser;
+      const searchedGists = await UserController.GetGists(ctx.Token, username);
 
-      ctx.SetAllUserData(
-        authuser,
-        searchedUser,
-        searchedOrgs,
-        searchedGists,
-        searchedRepos
-      );
+      ctx.SetData({
+        User: searchedUser,
+        Orgs: searchedOrgs,
+        Gists: searchedGists,
+        Repos: searchedRepos,
+      });
       setErrorText("");
     } catch (error) {
       setErrorText(error.toString());

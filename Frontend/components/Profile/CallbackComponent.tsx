@@ -11,38 +11,42 @@ const CallbackComponent = () => {
   const router = useRouter();
   const [errorText, setErrorText] = useState(null);
 
-  const code = router.query.code;
+  const code = router.query.code as string;
 
   useEffect(() => {
     const AuthorizeUser = async () => {
       try {
-        if (UserController.token !== "") return;
-
         if (!code) return;
 
-        if (ctx.AuthenticatedUser) return;
+        if (!ctx) return;
 
         const token = await UserController.AuthorizeUser(code);
 
-        console.log(token);
+        const authUser = await UserController.GetAuthenticatedUser(token);
 
-        UserController.token = token;
-
-        const authUser = await UserController.GetAuthenticatedUser();
-
-        const searchedOrgs = await UserController.GetOrgs(authUser.login);
-
-        const searchedRepos = await UserController.GetRepos(authUser.login);
-
-        const searchedGists = await UserController.GetGists(authUser.login);
-
-        ctx.SetAllUserData(
-          authUser,
-          authUser,
-          searchedOrgs,
-          searchedGists,
-          searchedRepos
+        const searchedOrgs = await UserController.GetOrgs(
+          token,
+          authUser.login
         );
+
+        const searchedRepos = await UserController.GetRepos(
+          token,
+          authUser.login
+        );
+
+        const searchedGists = await UserController.GetGists(
+          token,
+          authUser.login
+        );
+
+        ctx.SetData({
+          Token: token,
+          AuthenticatedUser: authUser,
+          User: authUser,
+          Orgs: searchedOrgs,
+          Gists: searchedGists,
+          Repos: searchedRepos,
+        });
 
         router.push("/profile");
       } catch (error) {

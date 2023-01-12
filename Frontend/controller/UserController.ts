@@ -6,7 +6,6 @@ import User from "../models/User";
 import Helper from "../utils/Helper";
 
 class UserController {
-  static token = "";
   static async AuthorizeUser(code: string) {
     const response = await axios.get(
       Helper.BACKEND_URL + "/api/authorizeuser/" + code
@@ -15,26 +14,22 @@ class UserController {
     return response.data.token;
   }
 
-  static async GetAuthenticatedUser() {
-    const response = await axios.get(
-      Helper.BACKEND_URL + "/api/user",
-      {
-        headers: {
-          authorization: "Bearer " + this.token,
-        },
-      }
-    );
+  static async GetAuthenticatedUser(token: string) {
+    const response = await axios.get(Helper.BACKEND_URL + "/api/user", {
+      headers: {
+        authorization: "Bearer " + token,
+      },
+    });
 
     return response.data as User;
   }
 
-
-  static async GetUser(username: string) {
+  static async GetUser(token: string, username: string) {
     const response = await axios.get(
       Helper.BACKEND_URL + "/api/user/" + username,
       {
         headers: {
-          authorization: "Bearer " + this.token,
+          authorization: "Bearer " + token,
         },
       }
     );
@@ -42,12 +37,12 @@ class UserController {
     return response.data as User;
   }
 
-  static async GetOrgs(username: string) {
+  static async GetOrgs(token: string, username: string) {
     const response = await axios.get(
       Helper.BACKEND_URL + "/api/orgs/" + username,
       {
         headers: {
-          authorization: "Bearer " + this.token,
+          authorization: "Bearer " + token,
         },
       }
     );
@@ -55,12 +50,12 @@ class UserController {
     return response.data as Org[];
   }
 
-  static async GetRepos(username: string) {
+  static async GetRepos(token: string, username: string) {
     const response = await axios.get(
       Helper.BACKEND_URL + "/api/repos/" + username,
       {
         headers: {
-          authorization: "Bearer " + this.token,
+          authorization: "Bearer " + token,
         },
       }
     );
@@ -68,13 +63,12 @@ class UserController {
     return response.data as Repo[];
   }
 
-  static async GetGists(username: string) {
+  static async GetGists(token: string, username: string) {
     const response = await axios.get(
       Helper.BACKEND_URL + "/api/gists/" + username,
       {
         headers: {
-          authorization: "Bearer " + this.token,
-          "Access-Control-Allow-Origin": "*",
+          authorization: "Bearer " + token,
         },
       }
     );
