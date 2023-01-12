@@ -229,6 +229,10 @@
   color: #443456;
 }
 
+.LightRed {
+  color: rgb(163, 66, 66);
+}
+
 .HeadLine {
   font-family: "Oswald";
   text-align: center;

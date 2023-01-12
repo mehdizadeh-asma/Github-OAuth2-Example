@@ -21,12 +21,14 @@ const GistItem: React.FC<PropsType> = (props) => {
     fileUrl = "",
     fileName = "",
     type = "";
-  for (var key in props.MyGist.files) {
-    fileLanguage = props.MyGist.files[key].language;
-    fileUrl = props.MyGist.files[key].raw_url;
-    fileName = props.MyGist.files[key].filename;
-    type = props.MyGist.files[key].type;
-  }
+
+  if (props.MyGist)
+    for (var key in props.MyGist.files) {
+      fileLanguage = props.MyGist.files[key].language;
+      fileUrl = props.MyGist.files[key].raw_url;
+      fileName = props.MyGist.files[key].filename;
+      type = props.MyGist.files[key].type;
+    }
   return (
     <div className="row d-flex flex-column border border-bottom-1 colorizeLightPurple BoxShadowLightPurple rounded-1 my-2 mx-2 w90Per h18vh">
       <div className="col-md-11 d-inline-flex my-1 h5vh">

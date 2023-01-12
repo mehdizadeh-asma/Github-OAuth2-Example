@@ -1,44 +1,59 @@
 import UserController from "../../controller/UserController";
-import { useRef, MutableRefObject, useContext } from "react";
+import { useRef, MutableRefObject, useContext, useState } from "react";
 import RoundedProfile from "../UI/RoundedProfile";
 import Card from "react-bootstrap/Card";
 import Search from "../UI/Search";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./Navigation";
 import GithubContext from "../../context/app-context";
+import githubUsernameRegex from "github-username-regex";
 
 const ProfileContainer: React.FC = (props) => {
+  const [errorText, setErrorText] = useState("");
+
   const refUsernameInput =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>;
 
   const ctx = useContext(GithubContext);
 
   const SearchHandler = async () => {
-    const searchedUser = await UserController.GetUser(
-      refUsernameInput.current.value
-    );
+    try {
+      const username = refUsernameInput.current.value;
 
-    const searchedOrgs = await UserController.GetOrgs(
-      refUsernameInput.current.value
-    );
+      if (!githubUsernameRegex.test(username)) {
+        setErrorText("Invalid Username");
+        return;
+      }
 
-    const searchedRepos = await UserController.GetRepos(
-      refUsernameInput.current.value
-    );
+      const searchedUser = await UserController.GetUser(
+        refUsernameInput.current.value
+      );
 
-    const searchedGists = await UserController.GetGists(
-      refUsernameInput.current.value
-    );
+      const searchedOrgs = await UserController.GetOrgs(
+        refUsernameInput.current.value
+      );
 
-    const authuser = ctx.AuthenticatedUser;
+      const searchedRepos = await UserController.GetRepos(
+        refUsernameInput.current.value
+      );
 
-    ctx.SetAllUserData(
-      authuser,
-      searchedUser,
-      searchedOrgs,
-      searchedGists,
-      searchedRepos
-    );
+      const searchedGists = await UserController.GetGists(
+        refUsernameInput.current.value
+      );
+
+      const authuser = ctx.AuthenticatedUser;
+
+      ctx.SetAllUserData(
+        authuser,
+        searchedUser,
+        searchedOrgs,
+        searchedGists,
+        searchedRepos
+      );
+      setErrorText("");
+    } catch (error) {
+      setErrorText(error.toString());
+    }
   };
 
   return (
@@ -62,6 +77,7 @@ const ProfileContainer: React.FC = (props) => {
             InputLabelClassName=" text-secondary "
             onClick={SearchHandler}
           ></Search>
+          <div className="mx-2 text-white mt-3 mx-2 LightRed">{errorText}</div>
         </div>
         <div className="col-md-3 d-flex justify-content-end ">
           <div className=" w10vw h-100 ">
