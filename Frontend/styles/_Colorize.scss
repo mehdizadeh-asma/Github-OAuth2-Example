@@ -1,0 +1,114 @@
+// #region BG
+.BgGrdColorizePurple {
+  background: rgb(90, 49, 90); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(90, 49, 90),
+    rgb(126, 74, 126),
+    rgb(90, 49, 90)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    30deg,
+    rgb(50, 1, 49),
+    rgb(90, 49, 90),
+    rgb(126, 74, 126),
+    rgb(90, 49, 90),
+    rgb(50, 1, 49)
+  ) !important;
+}
+.BgGrdColorizeGray {
+  background: rgb(90, 49, 90); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(90, 49, 90),
+    rgb(126, 74, 126),
+    rgb(90, 49, 90)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    rgb(89, 88, 88),
+    rgb(200, 186, 200),
+    rgb(221, 205, 221),
+    rgb(200, 186, 200)
+  );
+}
+
+.BgGrdColorizePurpleBack {
+  background: rgb(90, 49, 90); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(90, 49, 90),
+    rgb(126, 74, 126),
+    rgb(90, 49, 90)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    rgb(59, 41, 70),
+    rgb(141, 135, 145),
+    rgb(142, 132, 148),
+    rgb(221, 205, 221),
+    rgb(218, 213, 218)
+  );
+}
+
+// #endregion
+
+.BtnGrdPurple {
+  background: #4e54c8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(50, 1, 49),
+    rgb(126, 74, 126),
+    rgb(50, 1, 49)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgb(90, 49, 90),
+    rgb(126, 74, 126),
+    rgb(90, 49, 90)
+  );
+}
+.BtnGrdOrange {
+  background: rgb(199, 126, 9); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(199, 126, 9),
+    rgb(232, 170, 69),
+    rgb(228, 168, 71),
+    rgb(197, 125, 9)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgb(199, 126, 9),
+    rgb(232, 170, 69),
+    rgb(228, 168, 71),
+    rgb(197, 125, 9)
+  );
+}
+.colorizeLightPurple {
+  background-color: $ColorLightPurple;
+  border: 1px solid $ColorLightPurple;
+}
+
+.DarkGray {
+  color: $MainBarColor;
+}
+.DarkPurpleBorder {
+  border-color: rgb(46, 22, 46);
+  // border-bottom: 2px solid rgb(50, 1, 49);
+  // box-shadow: 3px 3px rgb(37, 36, 36), -1em 0 0.4em olive;
+}
+.BgTransparent50Per {
+  background-color: 50%;
+}
+.LightGray {
+  background-color: rgb(252, 246, 255);
+}
+.LightPurple {
+  background-color: rgb(187, 37, 233);
+}
+.BoxShadowLightPurple {
+  box-shadow: 0 2px 8px 0 rgba(221, 201, 241, 0.2),
+    0 2px 20px 0 rgba(109, 98, 120, 0.19);
+}
+.DarkPurpleColor {
+  color: #443456;
+}

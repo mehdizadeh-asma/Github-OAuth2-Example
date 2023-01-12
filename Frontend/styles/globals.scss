@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,800;1,500&display=swap");
+@import "Variables";
+@import "Measures";
+@import "Colorize";
+@import "../components/Profile/Profile";
+@import "../components/UI/UI";
+@import "../components/Repo/Repos";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: $BodyFont;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
