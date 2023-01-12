@@ -1,15 +1,13 @@
-FROM node:alpine
+FROM node:slim
 
 WORKDIR /backend
 
-EXPOSE 8080
+COPY package.json ./package.json
 
-COPY package.prod.json ./package.json
-
-RUN npm install
-
-COPY .env .
+RUN npm install --production
 
 COPY ./dist ./dist
+
+EXPOSE 8080
 
 CMD ["npm", "start"]

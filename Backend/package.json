@@ -4,7 +4,8 @@
   "description": "Greple-Github-Challenge",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -L dist/app.js",
+    "dev": "nodemon -L dist/app.js",
+    "start":"node dist/app.js",
     "build": "tsc -w",
     "test": "jest",
     "test-coverage": "jest --coverage",
