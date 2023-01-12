@@ -2,12 +2,9 @@
   "name": "greple-github-challenge-backend",
   "version": "1.0.0",
   "description": "Greple-Github-Challenge",
-  "main": "app.js",
+  "main": "ap.js",
   "scripts": {
-    "start": "nodemon -L dist/app.js",
-    "build": "tsc -w",
-    "test": "jest",
-    "lint": "eslint"
+    "start": "node dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -23,21 +20,6 @@
     "url": "https://github.com/mehdizadeh-asma/Greple-Github-Challenge/issues"
   },
   "homepage": "https://github.com/mehdizadeh-asma/Greple-Github-Challenge#readme",
-  "devDependencies": {
-    "@types/body-parser": "^1.19.2",
-    "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.15",
-    "@types/jest": "^29.2.5",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.48.0",
-    "@typescript-eslint/parser": "^5.48.0",
-    "dotenv": "^16.0.3",
-    "jest": "^29.3.1",
-    "nodemon": "^2.0.20",
-    "ts-jest": "^29.0.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.4"
-  },
   "dependencies": {
     "@octokit/auth-oauth-user": "^2.0.4",
     "@octokit/core": "^4.1.0",
