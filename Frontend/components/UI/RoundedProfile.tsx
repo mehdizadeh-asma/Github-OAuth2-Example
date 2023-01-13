@@ -14,27 +14,32 @@ interface propsType {
 }
 const RoundedProfile: React.FC<propsType> = (props) => {
   return (
-    <div className="row d-flex flex-column w-100 px-2 py-2 justify-content-center align-items-center">
+    <div className="row d-flex flex-column w-100  py-2 justify-content-center align-items-center">
       <Image
         id="imgX"
         className={
-          "img-fluid align-self-center rounded-circle " + props.CssClassPic
+          "img-fluid mx-2 rounded-circle " + props.CssClassPic
         }
         src={props.PictureUrl}
         alt={props.Username}
       />
-      <p className={props.CssClassText}>{props.Name}</p>
+      <p className={`${props.CssClassText}  `}>
+        {props.Name}
+      </p>
       <p className={props.CssClassText}>
-        <small>{props.Username}</small>
+        <small className="ResponsiveUserLabel">{props.Username}</small>
       </p>
       {props.HasFollowerPart ? (
-        <OverviewItem
+        <div className="border border-1 ResponsiveFollwer">
+          <OverviewItem
           OneCol={false}
           IconOne={faPeopleGroup}
           IconTwo={faPeopleLine}
           ContentOne={props.followers}
           ContentTwo={props.following}
         ></OverviewItem>
+        </div>
+        
       ) : (
         ""
       )}

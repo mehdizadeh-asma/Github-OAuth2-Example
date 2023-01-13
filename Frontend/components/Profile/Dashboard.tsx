@@ -13,13 +13,12 @@ const Dashboard = () => {
   const ctx = useContext(GithubContext);
 
   return (
-    <div className="row container my-3 NavResponsive ">
+    <div className="row container w80Per my-3 NavResponsive ">
       <Tab.Container defaultActiveKey="view">
         <Row className="w-100  px-3">
           <div className="col">
             <Nav className="h2rem  ">
               <Nav.Item className="me-2 NavItem ">
-                {" "}
                 {/*//NavResponsive */}
                 <Nav.Link
                   className="NavLink shadow HoverRescale BtnGrdPurple  w30vw MainBox "
@@ -68,10 +67,10 @@ const Dashboard = () => {
         </Row>
         <Row
           className={
-            " Pane w64-5vw mx-3 border border-1  hMin4vh  rounded-1 shadow colorizeLightPurple my-1 py-2"
+            " Pane border border-1  hMin4vh  rounded-1 shadow colorizeLightPurple my-1 py-2"
           }
         >
-          <div className="col ">
+          <div className="col-8 ">
             <Tab.Content className="">
               <Tab.Pane eventKey="view" className=" ">
                 <Overview MyUser={ctx.User}></Overview>

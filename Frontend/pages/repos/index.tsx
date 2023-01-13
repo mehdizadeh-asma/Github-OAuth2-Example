@@ -3,11 +3,10 @@ import { useContext } from "react";
 import GithubContext from "../../context/app-context";
 
 export default function ReposPage() {
-  
   const ctx = useContext(GithubContext);
 
   return (
-    <div>
+    <div className="container">
       <Repos RepoList={ctx.Repos}></Repos>
     </div>
   );

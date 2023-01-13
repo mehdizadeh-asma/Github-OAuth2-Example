@@ -23,7 +23,9 @@ const OverviewItem: React.FC<propsType> = (props) => {
                 className="OverviewAwsomeIcon  "
                 icon={props.IconOne}
               />
-              <div className="fontsize08rem ">{props.ContentOne}</div>
+              <div className="fontsize08rem ResponsiveContentOne">
+                {props.ContentOne}
+              </div>
             </div>
           ) : (
             ""
@@ -34,10 +36,12 @@ const OverviewItem: React.FC<propsType> = (props) => {
           {props.ContentOne ? (
             <div className="col-md-6 d-flex flex-row  ">
               <FontAwesomeIcon
-                className="OverviewAwsomeIcon  "
+                className="OverviewAwsomeIcon ResponsiveIconTwo "
                 icon={props.IconOne}
               />
-              <div className="fontsize08rem   ">{props.ContentOne}</div>
+              <div className="fontsize08rem ResponsiveContentOne  ">
+                {props.ContentOne}
+              </div>
             </div>
           ) : (
             ""
@@ -45,10 +49,13 @@ const OverviewItem: React.FC<propsType> = (props) => {
           {props.ContentTwo ? (
             <div className="col-md-6 d-flex flex-row   ">
               <FontAwesomeIcon
-                className="OverviewAwsomeIcon "
+                className="OverviewAwsomeIcon ResponsiveIconTwo"
                 icon={props.IconTwo}
               />
-              <div className="fontsize08rem"> {props.ContentTwo}</div>
+              <div className="fontsize08rem ResponsiveContentTwo">
+                {" "}
+                {props.ContentTwo}
+              </div>
             </div>
           ) : (
             ""

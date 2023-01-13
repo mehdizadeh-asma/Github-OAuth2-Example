@@ -24,20 +24,22 @@ interface PropsType {
 }
 const Search = React.forwardRef<HTMLInputElement, PropsType>((props, ref) => {
   return (
-    <div className=" d-inline-flex ">
-      <FloatingLabel
-        controlId="floatingInput"
-        label="Github Username"
-        className={" h-100    " + props.InputLabelClassName}
-      >
-        <Form.Control
-          className={`${props.InputClassName} my-2 mx-2 pb-3 pt-3`}
-          type="text"
-          placeholder="username"
-          ref={ref}
-          style={{ height: "5vh" }}
-        />
-      </FloatingLabel>
+    <div className="row  d-inline-flex  ">
+      <div className="col-9  ResponsiveSearch">
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Github Username"
+          className={" h-100 pt-1 fontsize08rem " + props.InputLabelClassName}
+        >
+          <Form.Control
+            className={`${props.InputClassName} my-1 pb-3 pt-3 fontsize1rem ResponsiveInput`}
+            type="text"
+            placeholder="username"
+            ref={ref}
+            style={{ height: "5vh" }}
+          />
+        </FloatingLabel>
+      </div>
       {/* <FloatingInput
         Title={props.FloatingLabelTitle || ""}
         type={props.type}
@@ -47,15 +49,16 @@ const Search = React.forwardRef<HTMLInputElement, PropsType>((props, ref) => {
         required={props.Inputrequired}
         ValidationMessage={props.InputValidationMessage}
       /> */}
-      <AwsomeButton
-        type="button"
-        Title={props.ButtonTitle}
-        onClick={props.onClick}
-        ClassName={props.ButtonCss}
-        Icon={props.Icon}
-        IconClass={props.IconCssClass}
-      ></AwsomeButton>
- 
+      <div className="col-3 ResponsiveSearch  ">
+        <AwsomeButton
+          type="button"
+          Title={props.ButtonTitle}
+          onClick={props.onClick}
+          ClassName={props.ButtonCss}
+          Icon={props.Icon}
+          IconClass={props.IconCssClass}
+        ></AwsomeButton>
+      </div>
     </div>
   );
 });

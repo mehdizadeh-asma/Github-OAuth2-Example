@@ -76,14 +76,13 @@ const ProfileContainer = (props: PropsType) => {
         className=" w-100 mx-2 px-0 d-flex flex-row align-items-center
        mt-1 bg-transparent  DarkPurpleBorder shadow h12vh"
       >
-        <div className=" col-md-9 d-flex justify-content-start  ">
+        <div className="container row   col-md-4 d-flex justify-content-start  ">
           <Search
             ref={refUsernameInput}
             LabelCss="mx-3 text-white"
-            ButtonCss="BtnMain BtnGrdOrange w8vw h5vh my-1"
-            ButtonTitle="Search"
+            ButtonCss="BtnMain BtnGrdOrange w8vw h5vh my-2"
+            ButtonTitle=" Search  "
             Icon={faSearch}
-            IconCssClass="w2vw"
             type="text"
             InputClassName="w20vw h2rem MainBox"
             InputValidationMessage="Please Provide A Valid Username"
@@ -91,14 +90,16 @@ const ProfileContainer = (props: PropsType) => {
             InputLabelClassName=" text-secondary "
             onClick={SearchHandler}
           ></Search>
-          <div className="mx-2 text-white mt-3 mx-2 LightRed">{errorText}</div>
         </div>
-        <div className="col-md-3 d-flex justify-content-end ">
-          <div className=" w10vw h-100 ">
+        <div className="col-md-4   mx-2 text-white mt-3 mx-2 LightRed">
+          {errorText}
+        </div>
+        <div className="col-md-4  d-flex justify-content-end ">
+          <div className="col-6  d-inline-flex w15vw h-100  ResponsiveProfileSmall">
             <RoundedProfile
-              CssClassPic="mb-1 w-50"
-              CssClassText="my-0 text-center text-white  TahomaFont fontsize065rem"
-              Name={ctx.AuthenticatedUser?.name}
+              CssClassPic="mb-1  ResponsiveSmallProfImage"
+              CssClassText="w-100 my-0 text-center text-white  TahomaFont fontsize08rem ResponsiveSmallProfText"
+              Name=""
               Username={ctx.AuthenticatedUser?.login}
               PictureUrl={ctx.AuthenticatedUser?.avatar_url}
               HasFollowerPart={false}
@@ -108,10 +109,10 @@ const ProfileContainer = (props: PropsType) => {
       </Card>
 
       <Card className="col w-100 mx-2 px-2 py-2 d-flex flex-row my-1  DarkPurpleBorder">
-        <Card className="border-0 col-sm-3  ">
+        <Card className=" col-sm-3  ResponsiveProfileBig h-75 mx-2 shadow ">
           <RoundedProfile
-            CssClassPic="mb-1 w-100"
-            CssClassText="my-2 text-center text-secondary HeaderFont fontsize108rem"
+            CssClassPic="mb-1  ResponsiveBigProfImage"
+            CssClassText="my-1 text-center DarkPurpleColor HeaderFont fontsize108rem ResponsiveBigProfText"
             Name={ctx.User?.name}
             Username={ctx.User?.login}
             PictureUrl={ctx.User?.avatar_url}
@@ -132,11 +133,13 @@ const ProfileContainer = (props: PropsType) => {
             HasFollowerPart={true}
           ></RoundedProfile>
         </Card>
-        <div className="d-flex-column col-sm-9   ">
+        <div className="d-flex-column col-8  ">
           <div className="">
             <Navigation></Navigation>
           </div>
-          <div className="border border-1 rounded-1">{props.children}</div>
+          <div className="container border border-1 rounded-1">
+            {props.children}
+          </div>
         </div>
       </Card>
     </div>
