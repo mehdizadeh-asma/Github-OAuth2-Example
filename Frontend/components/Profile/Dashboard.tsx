@@ -13,49 +13,45 @@ const Dashboard = () => {
   const ctx = useContext(GithubContext);
 
   return (
-    <div className="row container w80Per my-3 NavResponsive ">
-      <Tab.Container defaultActiveKey="view">
-        <Row className="w-100  px-3">
-          <div className="col">
-            <Nav className="h2rem  ">
-              <Nav.Item className="me-2 NavItem ">
-                {/*//NavResponsive */}
+    <div className="row container mx-3  my-3 NavResponsive ">
+      <Tab.Container defaultActiveKey="overview">
+        <Row className="w-100 ">
+          <Col className="col  ">
+            <Nav className="w-100 p-0 m-0    NavContainer ">
+              <Nav.Item className="border-0 rounded-1">
                 <Nav.Link
-                  className="NavLink shadow HoverRescale BtnGrdPurple  w30vw MainBox "
-                  eventKey="view"
+                  className="NavLink shadow BtnGrdPurple HoverRescale border-0 rounded-1 "
+                  eventKey="overview"
                 >
-                  <div className="row d-inline-flex text-start justify-content-start align-items-start w-100  ">
-                    <div className="w2vw TabAwsomeDiv">
+                  <div className="row d-inline-flex w-100  ">
+                    <div className=" w2vw col-2 TabAwsomeDiv">
                       <FontAwesomeIcon
                         className=" w105vw TabAwsomeIcon text-white "
-                        // onClick={AddEventHandler}
                         icon={faUsersViewfinder}
                       />
                     </div>
-                    <div className="w20vw text-white mx-2  ">
-                      <h6 className="w-100 ">
+                    <div className="col text-white  ">
+                      <h6>
                         <small className="small">Overview</small>
                       </h6>
                     </div>
                   </div>
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className="">
-                {/* NavResponsive */}
+              <Nav.Item className="border-0 rounded-1">
                 <Nav.Link
-                  className="NavLink shadow BtnGrdPurple HoverRescale w30vw MainBox "
+                  className="NavLink shadow BtnGrdPurple HoverRescale border-0 rounded-1 "
                   eventKey="Organization"
                 >
                   <div className="row d-inline-flex w-100  ">
-                    <div className="col-2 TabAwsomeDiv">
+                    <div className=" w2vw col-2 TabAwsomeDiv">
                       <FontAwesomeIcon
                         className=" w105vw TabAwsomeIcon text-white "
-                        // onClick={AddEventHandler}
                         icon={faBoxesStacked}
                       />
                     </div>
                     <div className="col text-white  ">
-                      <h6 className="w-100 ">
+                      <h6 className="  ">
                         <small className="small">Organizations</small>
                       </h6>
                     </div>
@@ -63,23 +59,23 @@ const Dashboard = () => {
                 </Nav.Link>
               </Nav.Item>
             </Nav>
-          </div>
+          </Col>
         </Row>
         <Row
           className={
-            " Pane border border-1  hMin4vh  rounded-1 shadow colorizeLightPurple my-1 py-2"
+            "Pane hMin4vh rounded-1 shadow-sm colorizeLightx  my-1 py-2"
           }
         >
-          <div className="col-8 ">
+          <Col className="col-8 ">
             <Tab.Content className="">
-              <Tab.Pane eventKey="view" className=" ">
+              <Tab.Pane eventKey="overview" className=" ">
                 <Overview MyUser={ctx.User}></Overview>
               </Tab.Pane>
               <Tab.Pane eventKey="Organization" className=" ">
                 <Organizations MyOrgs={ctx.Orgs}></Organizations>
               </Tab.Pane>
             </Tab.Content>
-          </div>
+          </Col>
         </Row>
       </Tab.Container>
     </div>

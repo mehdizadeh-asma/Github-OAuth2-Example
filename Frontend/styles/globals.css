@@ -51,6 +51,10 @@
   height: 12vh;
 }
 
+.h13vh {
+  height: 13vh;
+}
+
 .h15vh {
   height: 15vh;
 }
@@ -187,6 +191,10 @@
   font-size: 0.8rem;
 }
 
+.fontsize09rem {
+  font-size: 0.85rem;
+}
+
 .fontsize1rem {
   font-size: 1rem;
 }
@@ -201,6 +209,10 @@
 
 .TahomaFont {
   font-family: Tahoma;
+}
+
+.hMin75per {
+  min-height: 75%;
 }
 
 .BgGrdColorizePurple {
@@ -230,7 +242,12 @@
 
 .colorizeLightPurple {
   background-color: #f7f3fd;
-  border: 1px solid #f7f3fd;
+  border: 1px solid #f1f0f3;
+}
+
+.colorizeLightx {
+  background: rgb(254, 243, 225); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgb(252, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
 .DarkGray {
@@ -254,15 +271,25 @@
 }
 
 .BoxShadowLightPurple {
-  box-shadow: 0 2px 8px 0 rgba(221, 201, 241, 0.2), 0 2px 20px 0 rgba(109, 98, 120, 0.19);
+  box-shadow: 0 2px 2px 0 rgba(130, 133, 139, 0.2), 0 2px 2px 0 rgba(201, 200, 239, 0.19);
 }
 
 .DarkPurpleColor {
-  color: #443456;
+  color: #4c4752;
 }
 
-.LightRed {
-  color: rgb(163, 66, 66);
+.FullPurpleColor {
+  color: rgb(46, 22, 46);
+  font-weight: 50%;
+  font-family: "Oswald";
+}
+
+.LightPurpleBorder {
+  border: 2px solid #f7f3fd;
+}
+
+.TransBg {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .HeadLine {
@@ -374,56 +401,76 @@
   }
 }
 
-@media (min-width: 1198px) {
+@media (min-width: 1500px) {
   .NavResponsive .NavLink {
-    width: 30vw;
-    height: 45px;
+    width: 25vw;
+    height: 5vh;
+    margin-left: 1.2vw;
   }
   .NavResponsive .Pane {
-    width: 50vw;
-    background-color: red;
+    width: 51.2vw;
+    margin-left: 2vw;
   }
 }
-@media (max-width: 1198px) {
+@media (min-width: 1300px) {
   .NavResponsive .NavLink {
-    width: 30vw;
-    height: 45px;
+    width: 25vw;
+    height: 5vh;
+    margin-left: 1.2vw;
   }
   .NavResponsive .Pane {
-    width: 61vw;
-    background-color: red;
+    width: 51.2vw;
+    margin-left: 2vw;
   }
 }
-@media (max-width: 880px) {
+@media (min-width: 1200px) {
   .NavResponsive .NavLink {
-    width: 27vw;
-  }
-  .NavResponsive .NavLink .TabAwsomeDiv {
-    display: none;
+    width: 25vw;
+    height: 5vh;
+    margin-left: 1.2vw;
   }
   .NavResponsive .Pane {
-    width: 55vw;
-    min-height: 40vh;
+    width: 51.2vw;
+    margin-left: 2vw;
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 1200px) {
   .NavResponsive .NavLink {
-    height: 45px;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 630px) {
-  .NavResponsive .NavLink {
-    width: 24vw;
+    width: 25vw;
+    height: 5vh;
+    margin-left: 1.1vw;
   }
   .NavResponsive .Pane {
-    width: 49vw;
+    width: 51.2vw;
+    margin-left: 2vw;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 1160px) {
   .NavResponsive .NavLink {
-    width: 15vw;
+    width: 22vw;
+    height: 5vh;
+    margin-left: 1.1vw;
   }
+  .NavResponsive .Pane {
+    width: 45.1vw;
+    margin-left: 2vw;
+  }
+}
+@media (max-width: 850px) {
+  .NavResponsive .NavLink {
+    width: 18vw;
+    height: 5vh;
+    margin-left: 1vw;
+  }
+  .NavResponsive .NavLink .small {
+    font-size: 0.5rem;
+  }
+  .NavResponsive .Pane {
+    width: 37vw;
+    margin-left: 2.5vw;
+  }
+}
+@media (max-width: 750px) {
   .NavResponsive .NavLink .small {
     display: none;
   }
@@ -433,25 +480,19 @@
   .NavResponsive .NavLink .TabAwsomeIcon {
     width: 3vw;
   }
-  .NavResponsive .Pane {
-    width: 45vw;
-  }
 }
-@media (max-width: 385px) {
+@media (max-width: 600px) {
   .NavResponsive .NavLink {
-    width: 12vw;
-  }
-  .NavResponsive .NavLink .small {
-    display: none;
+    width: 8vw;
+    height: 5vh;
+    margin-left: 1vw;
   }
   .NavResponsive .NavLink .TabAwsomeDiv {
-    display: block;
-  }
-  .NavResponsive .NavLink .TabAwsomeIcon {
-    width: 4vw;
+    display: none;
   }
   .NavResponsive .Pane {
-    width: 45vw;
+    width: 51.2vw;
+    margin-left: 2vw;
   }
 }
 
@@ -652,6 +693,16 @@
     text-align: center;
     font-size: 0.7rem;
   }
+}
+
+.MenuResponsive .nav-link:hover {
+  color: rgb(216, 133, 0);
+}
+.MenuResponsive .nav-link:active {
+  color: rgb(177, 5, 177);
+}
+.MenuResponsive .nav-link:link {
+  color: rgb(46, 22, 46);
 }
 
 _Responsive * {

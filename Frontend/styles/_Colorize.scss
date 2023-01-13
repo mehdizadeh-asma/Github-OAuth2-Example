@@ -85,7 +85,25 @@
 }
 .colorizeLightPurple {
   background-color: $ColorLightPurple;
-  border: 1px solid $ColorLightPurple;
+  border: 1px solid #f1f0f3;
+}
+.colorizeLightx {
+  background: rgb(254, 243, 225); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    to bottom,
+    rgb(252, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgb(252, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  );
 }
 
 .DarkGray {
@@ -106,12 +124,21 @@
   background-color: rgb(187, 37, 233);
 }
 .BoxShadowLightPurple {
-  box-shadow: 0 2px 8px 0 rgba(221, 201, 241, 0.2),
-    0 2px 20px 0 rgba(109, 98, 120, 0.19);
+  box-shadow: 0 2px 2px 0 rgba(130, 133, 139, 0.2),
+    0 2px 2px 0 rgba(201, 200, 239, 0.19);
 }
 .DarkPurpleColor {
-  color: #443456;
+  color: #4c4752;
 }
-.LightRed {
-  color: rgb(163, 66, 66);
+.FullPurpleColor {
+  color: rgb(46, 22, 46);
+  font-weight: 50%;
+  font-family: $HeaderFont;
+}
+.LightPurpleBorder {
+  border: 2px solid $ColorLightPurple;
+}
+.TransBg {
+  // background: transparentize($color: #fff, $amount: 0.8);
+  background: rgba(255, 255, 255, 0.3);
 }

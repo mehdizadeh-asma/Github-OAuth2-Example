@@ -72,59 +72,81 @@
 .RedirectRow {
   @include ResponsiveRow;
 }
-
+//NavContainer
 @mixin ResponsiveTab {
-  @media (min-width: 1198px) {
+  @media (min-width: 1500px) {
     & .NavLink {
-      width: 30vw;
-      height: 45px;
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.2vw;
     }
     & .Pane {
-      width: 50vw;
-      background-color: red;
+      width: 51.2vw;
+      margin-left: 2vw;
     }
   }
-  @media (max-width: 1198px) {
+  @media (min-width: 1300px) {
     & .NavLink {
-      width: 30vw;
-      height: 45px;
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.2vw;
     }
     & .Pane {
-      width: 61vw;
-      background-color: red;
+      width: 51.2vw;
+      margin-left: 2vw;
     }
   }
 
-  @media (max-width: 880px) {
+  @media (min-width: 1200px) {
     & .NavLink {
-      width: 27vw;
-      .TabAwsomeDiv {
-        display: none;
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.2vw;
+    }
+    & .Pane {
+      width: 51.2vw;
+      margin-left: 2vw;
+    }
+  }
+  @media (max-width: 1200px) {
+    & .NavLink {
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.1vw;
+    }
+    & .Pane {
+      width: 51.2vw;
+      margin-left: 2vw;
+    }
+  }
+
+  @media (max-width: 1160px) {
+    & .NavLink {
+      width: 22vw;
+      height: 5vh;
+      margin-left: 1.1vw;
+    }
+    & .Pane {
+      width: 45.1vw;
+      margin-left: 2vw;
+    }
+  }
+  @media (max-width: 850px) {
+    & .NavLink {
+      width: 18vw;
+      height: 5vh;
+      margin-left: 1vw;
+      .small {
+        font-size: 0.5rem;
       }
     }
     & .Pane {
-      width: 55vw;
-      min-height: 40vh;
+      width: 37vw;
+      margin-left: 2.5vw;
     }
   }
-  // height prob
-  @media (max-width: 690px) {
+  @media (max-width: 750px) {
     & .NavLink {
-      height: 45px;
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 630px) {
-    & .NavLink {
-      width: 24vw;
-    }
-    & .Pane {
-      width: 49vw;
-    }
-  }
-  @media (max-width: 630px) {
-    & .NavLink {
-      width: 15vw;
       .small {
         display: none;
       }
@@ -135,25 +157,19 @@
         width: 3vw;
       }
     }
-    & .Pane {
-      width: 45vw;
-    }
   }
-  @media (max-width: 385px) {
+  @media (max-width: 600px) {
     & .NavLink {
-      width: 12vw;
-      .small {
+      width: 8vw;
+      height: 5vh;
+      margin-left: 1vw;
+      .TabAwsomeDiv {
         display: none;
       }
-      .TabAwsomeDiv {
-        display: block;
-      }
-      .TabAwsomeIcon {
-        width: 4vw;
-      }
     }
     & .Pane {
-      width: 45vw;
+      width: 51.2vw;
+      margin-left: 2vw;
     }
   }
 }
@@ -386,4 +402,19 @@
 
 .ResponsiveProfileBig {
   @include ResponsiveProfileBigMixix;
+}
+
+.MenuResponsive {
+  & .nav-link:hover {
+    color: rgb(216, 133, 0);
+  }
+  & .nav-link:active {
+    color: rgb(177, 5, 177);
+  }
+  // & .nav-link:visited {
+  //   color: rgb(46, 22, 46);
+  // }
+  & .nav-link:link {
+    color: rgb(46, 22, 46);
+  }
 }

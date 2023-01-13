@@ -1,6 +1,7 @@
 import {
   faBook,
   faBookAtlas,
+  faBoxArchive,
   faCode,
   faNoteSticky,
   faSearch,
@@ -30,12 +31,15 @@ const Navigation: React.FC = () => {
     //         <FontAwesomeIcon className="MenuAwsomeIcon" icon={faBook} />
     //         <Link href="/repos">reps</Link>
     //       </Nav.Link>
-    //     </Nav>
+    //     </Nav>//
     //   </Container>
     // </Navbar>
-    <ul className="nav nav-tabs border border-1   rounded-1 mb-1   colorizeLightPurple ">
-      <li className="nav-item  ">
-        <Link href="/profile" className="nav-link   text-secondary">
+    <ul className="nav nav-tabs  rounded-1 mb-1 colorizeLightPurple shadow-sm MenuResponsive">
+      <li className="nav-item  DarkPurpleColor">
+        <Link
+          href="/profile"
+          className="nav-link fontsize09rem DarkPurpleColor"
+        >
           <FontAwesomeIcon
             className="MenuAwsomeIcon "
             icon={faUsersViewfinder}
@@ -44,19 +48,19 @@ const Navigation: React.FC = () => {
         </Link>
       </li>
       <li className="nav-item">
-        <Link href="/repos" className="nav-link text-secondary">
-          <FontAwesomeIcon className="MenuAwsomeIcon" icon={faBook} />
+        <Link href="/repos" className="nav-link DarkPurpleColor fontsize09rem">
+          <FontAwesomeIcon className="MenuAwsomeIcon" icon={faBoxArchive} />
           Repositories
         </Link>
       </li>
       <li className="nav-item">
-        <Link href="/gists" className="nav-link text-secondary">
+        <Link href="/gists" className="nav-link DarkPurpleColor fontsize09rem">
           <FontAwesomeIcon className="MenuAwsomeIcon" icon={faCode} />
           Gists
         </Link>
       </li>
       <li className="nav-item">
-        <Link href="/" className="nav-link DarkPurple">
+        <Link href="/" className="nav-link FullPurpleColor fontsize09rem">
           {/* <FontAwesomeIcon className="MenuAwsomeIcon" icon={faBook} /> */}
           Meet Github
         </Link>

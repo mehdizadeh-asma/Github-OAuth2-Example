@@ -74,7 +74,7 @@ const ProfileContainer = (props: PropsType) => {
     <div className="row container-fluid d-flex flex-column  BgGrdColorizePurpleBack h-100 ">
       <Card
         className=" w-100 mx-2 px-0 d-flex flex-row align-items-center
-       mt-1 bg-transparent  DarkPurpleBorder shadow h12vh"
+       mt-1 bg-transparent  DarkPurpleColor shadow h13vh"
       >
         <div className="container row   col-md-4 d-flex justify-content-start  ">
           <Search
@@ -108,8 +108,8 @@ const ProfileContainer = (props: PropsType) => {
         </div>
       </Card>
 
-      <Card className="col w-100 mx-2 px-2 py-2 d-flex flex-row my-1  DarkPurpleBorder">
-        <Card className=" col-sm-3  ResponsiveProfileBig h-75 mx-2 shadow ">
+      <Card className="col w-100 mx-2 px-2 py-2 d-flex flex-row my-1 TransBg   shadow-sm">
+        <Card className=" col-sm-3  ResponsiveProfileBig  mx-2 shadow colorizeLightPurple">
           <RoundedProfile
             CssClassPic="mb-1  ResponsiveBigProfImage"
             CssClassText="my-1 text-center DarkPurpleColor HeaderFont fontsize108rem ResponsiveBigProfText"
@@ -133,11 +133,12 @@ const ProfileContainer = (props: PropsType) => {
             HasFollowerPart={true}
           ></RoundedProfile>
         </Card>
+
         <div className="d-flex-column col-8  ">
           <div className="">
             <Navigation></Navigation>
           </div>
-          <div className="container border border-1 rounded-1">
+          <div className="container rounded-1 colorizeLightPurple  hMin75per">
             {props.children}
           </div>
         </div>
