@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon -L dist/app.js",
+    "build-dev": "tsc -w",
     "start":"node dist/app.js",
     "build": "tsc",
     "test": "jest",

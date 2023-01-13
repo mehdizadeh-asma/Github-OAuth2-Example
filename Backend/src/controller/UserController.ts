@@ -10,13 +10,21 @@ class UserController {
     try {
       const code = req.params.code;
 
+      const clientId = process.env.GITHUB_OAUTH_CLIENTID;
+      const clientSecret = process.env.GITHUB_OAUTH_CLIENTSECRET;
+
       if (!code || code === "") throw new Error("Invalid Code");
 
+      if (!clientId || clientId === "")
+        throw new Error("Github ClientId doesn't Exist!");
+
+      if (!clientSecret || clientSecret === "")
+        throw new Error("Github ClientSecret doesn't Exist!");
+
       const auth = createOAuthUserAuth({
-        clientId: "648e6c81597252d33496",
-        clientSecret: "08a3ab86fe84c1795f539239802e8ece59129882",
+        clientId: clientId,
+        clientSecret: clientSecret,
         code: code,
-        redirectUrl: "",
       });
 
       const { token } = await auth();
