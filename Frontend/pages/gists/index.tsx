@@ -4,5 +4,7 @@ import GithubContext from "../../context/app-context";
 
 export default function GistsPage() {
   const ctx = useContext(GithubContext);
-  return <div>{<Gists GistList={ctx.Gists}></Gists>}</div>;
+  return (
+    <div className="container">{<Gists GistList={ctx.Gists}></Gists>}</div>
+  );
 }

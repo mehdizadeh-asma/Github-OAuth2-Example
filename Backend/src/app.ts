@@ -5,14 +5,16 @@ import express, {
   ErrorRequestHandler,
 } from "express";
 import bodyParser from "body-parser";
-
 import cors from "cors";
+import dotenv from "dotenv";
 
 import userRouter from "./routes/UserRouter";
 
 const app = express();
 
 app.use(bodyParser.json());
+
+dotenv.config();
 
 const corsOptions = {
   origin: "*",
@@ -41,5 +43,9 @@ app.get("/", (req: Request, res: Response) => {
   res.status(200).json({ message: "app is running!" });
 });
 
-app.listen(80);
-console.log(`Server is Startig at http://localhost:80`);
+let portNumber = "80";
+if (process.env.PORT_NUMBER && process.env.PORT_NUMBER !== "")
+  portNumber = process.env.PORT_NUMBER;
+
+app.listen(portNumber);
+console.log("Server is Startig at http://localhost:" + portNumber);

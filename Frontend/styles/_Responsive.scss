@@ -1,25 +1,22 @@
-.HoverToWhite {
-  transition: transform 0.2s;
+.HoverRescale {
+  transition: transform scale 1s;
   transition-timing-function: linear;
-  &:hover {
-    color: rgb(255, 254, 248);
-    font-size: 1.04rem;
-  }
-}
-.HoverAndRescaleToWhite {
   &:hover {
     transform: scale(1.05, 1.05);
   }
-  @extend .HoverToWhite;
 }
-.HoverRescale {
-  transition: transform 0.2s;
+.HoverAndRescaleToWhite {
+  transition: transform scale 1s;
   transition-timing-function: linear;
   &:hover {
-    color: rgb(255, 254, 248);
+    color: #fff;
     // font-size: 1.04rem;
-    transform: scale(1.02, 1.02);
   }
+  &:active {
+    color: rgb(248, 227, 123);
+  }
+
+  @extend .HoverRescale;
 }
 
 @mixin ResponsiveRow() {
@@ -75,47 +72,81 @@
 .RedirectRow {
   @include ResponsiveRow;
 }
-
+//NavContainer
 @mixin ResponsiveTab {
-  @media (max-width: 1198px) {
+  @media (min-width: 1500px) {
     & .NavLink {
-      width: 30vw;
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.2vw;
     }
     & .Pane {
-      width: 61vw;
+      width: 51.2vw;
+      margin-left: 2vw;
+    }
+  }
+  @media (min-width: 1300px) {
+    & .NavLink {
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.2vw;
+    }
+    & .Pane {
+      width: 51.2vw;
+      margin-left: 2vw;
     }
   }
 
-  @media (max-width: 880px) {
+  @media (min-width: 1200px) {
     & .NavLink {
-      width: 27vw;
-      .TabAwsomeDiv {
-        display: none;
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.2vw;
+    }
+    & .Pane {
+      width: 51.2vw;
+      margin-left: 2vw;
+    }
+  }
+  @media (max-width: 1200px) {
+    & .NavLink {
+      width: 25vw;
+      height: 5vh;
+      margin-left: 1.1vw;
+    }
+    & .Pane {
+      width: 51.2vw;
+      margin-left: 2vw;
+    }
+  }
+
+  @media (max-width: 1160px) {
+    & .NavLink {
+      width: 22vw;
+      height: 5vh;
+      margin-left: 1.1vw;
+    }
+    & .Pane {
+      width: 45.1vw;
+      margin-left: 2vw;
+    }
+  }
+  @media (max-width: 850px) {
+    & .NavLink {
+      width: 18vw;
+      height: 5vh;
+      margin-left: 1vw;
+      .small {
+        font-size: 0.5rem;
       }
     }
     & .Pane {
-      width: 55vw;
-      min-height: 40vh;
+      width: 37vw;
+      margin-left: 2.5vw;
     }
   }
-  // height prob
-  @media (max-width: 690px) {
+  @media (max-width: 750px) {
     & .NavLink {
-      height: 45px;
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 630px) {
-    & .NavLink {
-      width: 24vw;
-    }
-    & .Pane {
-      width: 49vw;
-    }
-  }
-  @media (max-width: 630px) {
-    & .NavLink {
-      width: 15vw;
       .small {
         display: none;
       }
@@ -126,29 +157,264 @@
         width: 3vw;
       }
     }
-    & .Pane {
-      width: 45vw;
-    }
   }
-  @media (max-width: 385px) {
+  @media (max-width: 600px) {
     & .NavLink {
-      width: 12vw;
-      .small {
+      width: 8vw;
+      height: 5vh;
+      margin-left: 1vw;
+      .TabAwsomeDiv {
         display: none;
       }
-      .TabAwsomeDiv {
-        display: block;
-      }
-      .TabAwsomeIcon {
-        width: 4vw;
-      }
     }
     & .Pane {
-      width: 45vw;
+      width: 51.2vw;
+      margin-left: 2vw;
     }
   }
 }
 
 .NavResponsive {
   @include ResponsiveTab;
+}
+
+@mixin ResponsiveSearchMixix {
+  @media (max-width: 1100px) {
+    & .ResponsiveBtn {
+      font-size: 0.8rem;
+      // font-weight: bold;
+    }
+  }
+  @media (max-width: 940px) {
+    & .ResponsiveIcon {
+      display: none;
+    }
+  }
+  @media (max-width: 940px) {
+    & .ResponsiveBtn {
+      margin-left: 2vw;
+    }
+  }
+  @media (max-width: 765px) {
+    & .ResponsiveInput {
+      width: 45vw;
+    }
+    & .ResponsiveBtn {
+      font-size: 0.7rem;
+      width: 13vw;
+      // font-weight: bold;
+    }
+  }
+  @media (max-width: 445px) {
+    & .ResponsiveInput {
+      width: 45vw;
+    }
+    & .ResponsiveBtn {
+      font-size: 0.7rem;
+      width: 15vw;
+      // font-weight: bold;
+    }
+  }
+}
+
+.ResponsiveSearch {
+  @include ResponsiveSearchMixix;
+}
+
+// small profile
+@mixin ResponsiveProfileSmallMixix {
+  @media (min-width: 1200px) {
+    & .ResponsiveSmallProfImage {
+      width: 6.5vw;
+    }
+    & .ResponsiveSmallProfText {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    & .ResponsiveSmallProfImage {
+      width: 8vw;
+    }
+    & .ResponsiveSmallProfText {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 970px) {
+    & .ResponsiveSmallProfImage {
+      width: 10vw;
+    }
+    & .ResponsiveSmallProfText {
+      font-size: 0.8rem;
+      padding-top: 0.5vh;
+    }
+  }
+
+  @media (max-width: 550px) {
+    & .ResponsiveSmallProfImage {
+      width: 12vw;
+    }
+    & .ResponsiveSmallProfText {
+      font-size: 0.6rem;
+      padding-top: 0.4vh;
+    }
+  }
+}
+
+.ResponsiveProfileSmall {
+  @include ResponsiveProfileSmallMixix;
+}
+
+//Big Profile
+
+@mixin ResponsiveProfileBigMixix {
+  @media (min-width: 1200px) {
+    & {
+      height: 65vh;
+    }
+    & .ResponsiveBigProfImage {
+      width: 40vw;
+    }
+    & .ResponsiveBigProfText {
+      font-size: 2rem;
+    }
+    .ResponsiveFollwer {
+      width: 85%;
+      background-color: rgb(216, 206, 226);
+      border-radius: 5px;
+      color: #443456;
+      .ResponsiveContentOne {
+        text-align: center;
+        font-size: 0.7rem;
+      }
+      .ResponsiveIconTwo {
+        width: 1.5vw;
+      }
+      .ResponsiveIconOne {
+        width: 1.5vw;
+      }
+      .ResponsiveContentTwo {
+        text-align: center;
+        font-size: 0.7rem;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    & {
+      height: 50vh;
+    }
+    & .ResponsiveBigProfImage {
+      width: 40vw;
+    }
+    & .ResponsiveBigProfText {
+      font-size: 1.5rem;
+    }
+    .ResponsiveFollwer {
+      width: 85%;
+      background-color: rgb(216, 206, 226);
+      border-radius: 5px;
+      color: #443456;
+      .ResponsiveIconTwo {
+        width: 6vw;
+      }
+      .ResponsiveIconOne {
+        width: 6vw;
+      }
+      .ResponsiveContentOne {
+        text-align: center;
+        font-size: 0.7rem;
+      }
+      .ResponsiveContentTwo {
+        text-align: center;
+        font-size: 0.7rem;
+      }
+    }
+  }
+  @media (max-width: 1180px) {
+    & {
+      height: 45vh;
+    }
+    & .ResponsiveBigProfImage {
+      width: 40vw;
+    }
+    & .ResponsiveBigProfText {
+      font-size: 1.7rem;
+    }
+    .ResponsiveFollwer {
+      width: 85%;
+      background-color: rgb(216, 206, 226);
+      border-radius: 5px;
+      color: #443456;
+      .ResponsiveIconTwo {
+        width: 7vw;
+      }
+      .ResponsiveIconOne {
+        width: 7vw;
+      }
+      .ResponsiveContentOne {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+      .ResponsiveContentTwo {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    & {
+      height: 45vh;
+    }
+    & .ResponsiveBigProfImage {
+      width: 40vw;
+    }
+    & .ResponsiveBigProfText {
+      font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 850px) {
+    & {
+      height: 40vh;
+    }
+    & .ResponsiveBigProfImage {
+      width: 40vw;
+    }
+    & .ResponsiveBigProfText {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 766px) {
+    .ResponsiveFollwer {
+      height: 10vh;
+    }
+    .ResponsiveFollwer {
+      .ResponsiveContentOne {
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 1vh;
+      }
+      .ResponsiveContentTwo {
+        text-align: center;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+.ResponsiveProfileBig {
+  @include ResponsiveProfileBigMixix;
+}
+
+.MenuResponsive {
+  & .nav-link:hover {
+    color: rgb(216, 133, 0);
+  }
+  & .nav-link:active {
+    color: rgb(177, 5, 177);
+  }
+  // & .nav-link:visited {
+  //   color: rgb(46, 22, 46);
+  // }
+  & .nav-link:link {
+    color: rgb(46, 22, 46);
+  }
 }

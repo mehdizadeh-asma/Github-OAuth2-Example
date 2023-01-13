@@ -38,6 +38,9 @@
 .h12vh {
   height: 12vh;
 }
+.h13vh {
+  height: 13vh;
+}
 .h15vh {
   height: 15vh;
 }
@@ -53,6 +56,9 @@
 .hMin4vh {
   min-height: 5vh;
 }
+.h65vh {
+  height: 65vh;
+}
 // #endregion
 // #region Width in ViewWidth
 .w3vw {
@@ -60,6 +66,9 @@
 }
 .w105vw {
   width: 1.5vw;
+}
+.w1vw {
+  width: 1vw;
 }
 .w2vw {
   width: 2vw;
@@ -72,6 +81,12 @@
 }
 .w5vw {
   width: 5vw;
+}
+.w6vw {
+  width: 6vw;
+}
+.w40Per {
+  width: 40%;
 }
 .w7vw {
   width: 7vw;
@@ -95,6 +110,9 @@
 .w30vw {
   width: 32vw;
 }
+.w80Per {
+  width: 80%;
+}
 .w90Per {
   width: 90%;
 }
@@ -103,6 +121,9 @@
 }
 .w64-5vw {
   width: 64.5vw;
+}
+.wpx {
+  width: 20px;
 }
 // #endregion
 // #region TextSize in rem & FontFamily
@@ -127,6 +148,9 @@
 .fontsize08rem {
   font-size: 0.8rem;
 }
+.fontsize09rem {
+  font-size: 0.85rem;
+}
 .fontsize1rem {
   font-size: 1rem;
 }
@@ -139,5 +163,8 @@
 }
 .TahomaFont {
   font-family: Tahoma;
+}
+.hMin75per {
+  min-height: 75%;
 }
 // #endregion

@@ -8,7 +8,7 @@ interface PropsType {
 }
 const Repos: React.FC<PropsType> = (props) => {
   return (
-    <div className="row mx-5 container d-flex justify-content-center my-2  w90Per  ">
+    <div className="row container d-flex justify-content-center my-2  w80Per  ">
       {props.RepoList &&
         props.RepoList.map((repo) => (
           <RepoItem key={repo.id} MyRepo={repo}></RepoItem>
