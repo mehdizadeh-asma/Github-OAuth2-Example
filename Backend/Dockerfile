@@ -8,6 +8,10 @@ RUN npm install --production
 
 COPY ./dist ./dist
 
-EXPOSE 8080
+ENV GITHUB_OAUTH_CLIENTID ""
+
+ENV GITHUB_OAUTH_CLIENTSECRET ""
+
+EXPOSE 80
 
 CMD ["npm", "start"]
