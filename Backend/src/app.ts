@@ -41,5 +41,5 @@ app.get("/", (req: Request, res: Response) => {
   res.status(200).json({ message: "app is running!" });
 });
 
-app.listen(8080);
-console.log(`Server is Startig at http://localhost:8080`);
+app.listen(80);
+console.log(`Server is Startig at http://localhost:80`);
