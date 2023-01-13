@@ -1,0 +1,154 @@
+.HoverToWhite {
+  transition: transform 0.2s;
+  transition-timing-function: linear;
+  &:hover {
+    color: rgb(255, 254, 248);
+    font-size: 1.04rem;
+  }
+}
+.HoverAndRescaleToWhite {
+  &:hover {
+    transform: scale(1.05, 1.05);
+  }
+  @extend .HoverToWhite;
+}
+.HoverRescale {
+  transition: transform 0.2s;
+  transition-timing-function: linear;
+  &:hover {
+    color: rgb(255, 254, 248);
+    // font-size: 1.04rem;
+    transform: scale(1.02, 1.02);
+  }
+}
+
+@mixin ResponsiveRow() {
+  @media (min-width: 1100px) {
+    & {
+      width: 50%;
+      .MeetBtn {
+        width: 18vw;
+      }
+    }
+  }
+  @media (max-width: 1100px) {
+    & {
+      width: 80%;
+      .MeetBtn {
+        width: 30vw;
+      }
+    }
+  }
+  @media (max-width: 570px) {
+    & {
+      width: 90%;
+      .MeetBtn {
+        width: 30vw;
+      }
+    }
+  }
+  @media (max-width: 380px) {
+    & {
+      width: 99%;
+
+      .MeetBtn {
+        width: 45vw;
+      }
+    }
+  }
+  @media (max-width: 380px) {
+    & {
+      background-color: white;
+
+      width: 99%;
+      .MeetBtn {
+        width: 45vw;
+        font-size: 0.7rem;
+      }
+      .ExploreDiv {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.RedirectRow {
+  @include ResponsiveRow;
+}
+
+@mixin ResponsiveTab {
+  @media (max-width: 1198px) {
+    & .NavLink {
+      width: 30vw;
+    }
+    & .Pane {
+      width: 61vw;
+    }
+  }
+
+  @media (max-width: 880px) {
+    & .NavLink {
+      width: 27vw;
+      .TabAwsomeDiv {
+        display: none;
+      }
+    }
+    & .Pane {
+      width: 55vw;
+      min-height: 40vh;
+    }
+  }
+  // height prob
+  @media (max-width: 690px) {
+    & .NavLink {
+      height: 45px;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 630px) {
+    & .NavLink {
+      width: 24vw;
+    }
+    & .Pane {
+      width: 49vw;
+    }
+  }
+  @media (max-width: 630px) {
+    & .NavLink {
+      width: 15vw;
+      .small {
+        display: none;
+      }
+      .TabAwsomeDiv {
+        display: block;
+      }
+      .TabAwsomeIcon {
+        width: 3vw;
+      }
+    }
+    & .Pane {
+      width: 45vw;
+    }
+  }
+  @media (max-width: 385px) {
+    & .NavLink {
+      width: 12vw;
+      .small {
+        display: none;
+      }
+      .TabAwsomeDiv {
+        display: block;
+      }
+      .TabAwsomeIcon {
+        width: 4vw;
+      }
+    }
+    & .Pane {
+      width: 45vw;
+    }
+  }
+}
+
+.NavResponsive {
+  @include ResponsiveTab;
+}

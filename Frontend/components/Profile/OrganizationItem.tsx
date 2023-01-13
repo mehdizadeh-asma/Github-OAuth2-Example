@@ -14,10 +14,10 @@ const OrganizationItem: React.FC<propsType> = (props) => {
         alt={props.MyOrg?.login}
       />
       <dl>
-        <dt className="w-100 mx-2 justify-content-start mt-1 fontsize1rem">
+        <dt className="w-100 mx-2 justify-content-start mt-1 fontsize08rem">
           {props.MyOrg?.login}
         </dt>
-        <dd className="w-100 mx-2 justify-content-start mt-2 fontsize08rem">
+        <dd className="w-100 mx-2 justify-content-start mt-2 fontsize065rem">
           {props.MyOrg?.description}
         </dd>
       </dl>

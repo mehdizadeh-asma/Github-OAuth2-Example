@@ -16,7 +16,7 @@ const AwsomeButton = React.forwardRef<HTMLButtonElement, PropsType>(
       <button
         type={props.type}
         ref={ref}
-        className={"btn py-2 align-self-center " + props.ClassName}
+        className={"btn pt-1 pb-0 align-self-center " + props.ClassName}
         onClick={props.onClick}
       >
         {props.Icon ? (

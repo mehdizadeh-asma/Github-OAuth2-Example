@@ -4,9 +4,9 @@
 @import "Colorize";
 @import "../components/Profile/Profile";
 @import "../components/UI/UI";
-@import "../components/Repo/Repos";
+@import "Responsive";
 
-* {
+_Responsive * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;

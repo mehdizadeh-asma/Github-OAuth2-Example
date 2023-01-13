@@ -1,8 +1,14 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Dashboard from "../components/Profile/Dashboard";
+import { useContext, useEffect } from "react";
+import GithubContext from "../context/app-context";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const ctx = useContext(GithubContext);
+ 
+
   return (
     <>
       <Head>

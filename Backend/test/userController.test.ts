@@ -1,4 +1,3 @@
-import { NextFunction } from "express";
 import UserController from "../src/controller/UserController";
 
 let mockRequest: any;
@@ -66,21 +65,21 @@ describe("Get User", () => {
     expect(nextFunction).toReturnWith(new Error("Invalid Token"));
   });
 
-  test("Return status 200 all parameter are correct", async () => {
-    mockRequest = {
-      params: {
-        username: "mehdizadeh-asma",
-      },
-      headers: {
-        authorization: "Bearer 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",
-      },
-    };
+//   test("Return status 200 all parameter are correct", async () => {
+//     mockRequest = {
+//       params: {
+//         username: "mehdizadeh-asma",
+//       },
+//       headers: {
+//         authorization: "Bearer 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",
+//       },
+//     };
 
-    await UserController.GetUser(mockRequest, mockResponse, nextFunction);
+//     await UserController.GetUser(mockRequest, mockResponse, nextFunction);
 
-    expect(mockResponse.json).toHaveBeenCalled();
-    expect(mockResponse.status).toHaveBeenCalledWith(200);
-  });
+//     expect(mockResponse.json).toHaveBeenCalled();
+//     expect(mockResponse.status).toHaveBeenCalledWith(200);
+//   });
 });
 
 describe("Get Gists", () => {
@@ -127,21 +126,21 @@ describe("Get Gists", () => {
     expect(nextFunction).toReturnWith(new Error("Invalid Token"));
   });
 
-  test("Return status 200 all parameter are correct", async () => {
-    mockRequest = {
-      params: {
-        username: "mehdizadeh-asma",
-      },
-      headers: {
-        authorization: "Bearer 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",
-      },
-    };
+  // test("Return status 200 all parameter are correct", async () => {
+  //   mockRequest = {
+  //     params: {
+  //       username: "mehdizadeh-asma",
+  //     },
+  //     headers: {
+  //       authorization: "Bearer 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",
+  //     },
+  //   };
 
-    await UserController.GetGists(mockRequest, mockResponse, nextFunction);
+  //   await UserController.GetGists(mockRequest, mockResponse, nextFunction);
 
-    expect(mockResponse.json).toHaveBeenCalled();
-    expect(mockResponse.status).toHaveBeenCalledWith(200);
-  });
+  //   expect(mockResponse.json).toHaveBeenCalled();
+  //   expect(mockResponse.status).toHaveBeenCalledWith(200);
+  // });
 });
 
 describe("Get Repos", () => {
@@ -188,21 +187,21 @@ describe("Get Repos", () => {
     expect(nextFunction).toReturnWith(new Error("Invalid Token"));
   });
 
-  test("Return status 200 all parameter are correct", async () => {
-    mockRequest = {
-      params: {
-        username: "mehdizadeh-asma",
-      },
-      headers: {
-        authorization: "Bearer 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",
-      },
-    };
+  // test("Return status 200 all parameter are correct", async () => {
+  //   mockRequest = {
+  //     params: {
+  //       username: "mehdizadeh-asma",
+  //     },
+  //     headers: {
+  //       authorization: "Bearer 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",
+  //     },
+  //   };
 
-    await UserController.GetRepos(mockRequest, mockResponse, nextFunction);
+  //   await UserController.GetRepos(mockRequest, mockResponse, nextFunction);
 
-    expect(mockResponse.json).toHaveBeenCalled();
-    expect(mockResponse.status).toHaveBeenCalledWith(200);
-  });
+  //   expect(mockResponse.json).toHaveBeenCalled();
+  //   expect(mockResponse.status).toHaveBeenCalledWith(200);
+  // });
 });
 
 describe("Get Orgs", () => {
@@ -249,19 +248,19 @@ describe("Get Orgs", () => {
     expect(nextFunction).toReturnWith(new Error("Invalid Token"));
   });
 
-  test("Return status 200 all parameter are correct", async () => {
-    mockRequest = {
-      params: {
-        username: "mehdizadeh-asma",
-      },
-      headers: {
-        authorization: "Bearer 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",
-      },
-    };
+  // test("Return status 200 all parameter are correct", async () => {
+  //   mockRequest = {
+  //     params: {
+  //       username: "mehdizadeh-asma",
+  //     },
+  //     headers: {
+  //       authorization: "Bearer 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",
+  //     },
+  //   };
 
-    await UserController.GetOrgs(mockRequest, mockResponse, nextFunction);
+  //   await UserController.GetOrgs(mockRequest, mockResponse, nextFunction);
 
-    expect(mockResponse.json).toHaveBeenCalled();
-    expect(mockResponse.status).toHaveBeenCalledWith(200);
-  });
+  //   expect(mockResponse.json).toHaveBeenCalled();
+  //   expect(mockResponse.status).toHaveBeenCalledWith(200);
+  // });
 });

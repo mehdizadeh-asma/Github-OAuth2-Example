@@ -4,14 +4,15 @@ import Repo from "../../models/Repo";
 import RepoItem from "./RepoItem";
 
 interface PropsType {
-  RepoList: Repo[];
+  RepoList?: Repo[];
 }
 const Repos: React.FC<PropsType> = (props) => {
   return (
     <div className="row mx-5 container d-flex justify-content-center my-2  w90Per  ">
-      {props.RepoList.map((repo) => (
-        <RepoItem key={repo.id} MyRepo={repo}></RepoItem>
-      ))}
+      {props.RepoList &&
+        props.RepoList.map((repo) => (
+          <RepoItem key={repo.id} MyRepo={repo}></RepoItem>
+        ))}
     </div>
   );
 };

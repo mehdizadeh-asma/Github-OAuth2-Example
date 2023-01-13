@@ -51,15 +51,21 @@
   height: 3rem;
 }
 .hMin4vh {
-  min-height: 4vh;
+  min-height: 5vh;
 }
 // #endregion
 // #region Width in ViewWidth
 .w3vw {
   width: 3vw;
 }
+.w105vw {
+  width: 1.5vw;
+}
 .w2vw {
   width: 2vw;
+}
+.w205vw {
+  width: 2.5vw;
 }
 .w4vw {
   width: 4vw;

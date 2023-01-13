@@ -19,15 +19,16 @@ const Organizations: React.FC<propsType> = (props) => {
   ];
   return (
     <div className="row d-flex flex-column w-100">
-      {props.MyOrgs?.map((org) => (
-        <OrganizationItem
-          key={org.id}
-          MyOrg={org}
-          // description={org.description}
-          // login={org.login}
-          // avatar_url={org.avatar_url}
-        ></OrganizationItem>
-      ))}
+      {props.MyOrgs &&
+        props.MyOrgs?.map((org) => (
+          <OrganizationItem
+            key={org.id}
+            MyOrg={org}
+            // description={org.description}
+            // login={org.login}
+            // avatar_url={org.avatar_url}
+          ></OrganizationItem>
+        ))}
     </div>
   );
 };

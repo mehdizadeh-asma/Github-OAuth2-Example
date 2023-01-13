@@ -16,7 +16,6 @@ interface propsType {
 import OverviewItem from "./OverviewItem";
 
 const Overview: React.FC<propsType> = (props) => {
- 
   return (
     <div className="row container-fluid d-flex flex-column ">
       <div className="row">
@@ -24,7 +23,7 @@ const Overview: React.FC<propsType> = (props) => {
           <div className="col-md-6 h5vh  ">
             <small>
               <DateShow
-                CssClass="w10vw fontsize08rem"
+                CssClass="w30vw fontsize065rem"
                 Format="InlineStandard"
                 Text="Created at"
                 Date={props.MyUser?.created_at}
@@ -38,7 +37,7 @@ const Overview: React.FC<propsType> = (props) => {
           <div className="col-md-6 h5vh ">
             <small>
               <DateShow
-                CssClass="w10vw fontsize08rem "
+                CssClass="w30vw fontsize065rem mx-1"
                 Format="InlineStandard"
                 Text="Updated on"
                 Date={props.MyUser?.created_at}
@@ -70,22 +69,20 @@ const Overview: React.FC<propsType> = (props) => {
       ) : (
         ""
       )}
-      {props.MyUser?.tweeter_username ? (
-        <OverviewItem
-          OneCol={true}
-          IconOne={faT}
-          IconTwo={faEarDeaf}
-          ContentOne={props.MyUser?.tweeter_username}
-        ></OverviewItem>
-      ) : (
-        ""
-      )}
+
+      <OverviewItem
+        OneCol={true}
+        IconOne={faT}
+        IconTwo={faEarDeaf}
+        ContentOne="tweeter user"
+      ></OverviewItem>
+
       {props.MyUser?.blog || props.MyUser?.email ? (
         <OverviewItem
           OneCol={false}
           IconOne={faLink}
           IconTwo={faMailBulk}
-          ContentOne={props.MyUser?.blog}
+          ContentOne="address web" //{props.MyUser?.blog}
           ContentTwo={props.MyUser?.email}
         ></OverviewItem>
       ) : (

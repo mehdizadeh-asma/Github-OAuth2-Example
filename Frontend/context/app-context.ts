@@ -5,23 +5,13 @@ import Repo from "../models/Repo";
 import User from "../models/User";
 
 export class GithubContextType {
+  Token?: string;
   User?: User;
   AuthenticatedUser?: User;
   Orgs?: Org[];
   Repos?: Repo[];
   Gists?: Gist[];
-  SetAuthenticatedUser?: (user: User) => void;
-  SetUser?: (user: User) => void;
-  SetOrgs?: (orgs: Org[]) => void;
-  SetGists?: (gists: Gist[]) => void;
-  SetRepos?: (repos: Repo[]) => void;
-  SetAllUserData?: (
-    user: User,
-    AuthenticatedUser:User,
-    orgs: Org[],
-    gists: Gist[],
-    repos: Repo[]
-  ) => void;
+  SetData?: (context: GithubContextType) => void;
 }
 
 const context: GithubContextType = {};

@@ -27,7 +27,6 @@ class UserController {
   };
   static GetAuthenticatedUser: RequestHandler = async (req, res, next) => {
     try {
-
       if (!req.headers["authorization"] || req.headers["authorization"] === "")
         throw new Error("Invalid Authorization");
 
@@ -55,9 +54,6 @@ class UserController {
       const username = req.params.username;
 
       if (!username || username === "") throw new Error("Invalid Username");
-      console.log("headers");
-
-      console.log(req.headers);
 
       if (!req.headers["authorization"] || req.headers["authorization"] === "")
         throw new Error("Invalid Authorization");
