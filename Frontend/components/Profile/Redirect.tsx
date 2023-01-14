@@ -2,14 +2,23 @@ import AwsomeButton from "../UI/AwsomeButton";
 import Image from "react-bootstrap/Image";
 import { useRouter } from "next/router";
 import styles from "../../styles/Meet.module.css";
+import { useState } from "react";
 
 const Redirect: React.FC = () => {
+  const [errorText, setErrorText] = useState("");
   const router = useRouter();
 
   const clickHandler = () => {
-    router.push(
-      "https://github.com/login/oauth/authorize?client_id=648e6c81597252d33496"
-    );
+    let url = "https://github.com/login/oauth/authorize";
+
+    if (!process.env.GITHUB_CLIENTID) {
+      setErrorText("GitHub ClientID is Unavailable");
+      return;
+    }
+
+    url = url + "?client_id=" + process.env.GITHUB_CLIENTID;
+
+    router.push(url);
   };
 
   return (
@@ -30,6 +39,7 @@ const Redirect: React.FC = () => {
             Title="Meet Github"
             onClick={clickHandler}
           ></AwsomeButton>
+          <div className="text-danger text-center mt-3">{errorText}</div>
         </div>
         <div
           className="col-6 ExploreDiv text-white h-100   BgGrdColorizePurple d-flex flex-column 
