@@ -16,7 +16,7 @@ const OverviewItem: React.FC<propsType> = (props) => {
   return (
     <div className="container-fluid ">
       {props.OneCol ? (
-        <div className="row w-100 d-inline-flex h6vh align-items-center">
+        <div className="row w-100 d-inline-flex   align-items-center">
           {props.ContentOne ? (
             <div className=" d-flex flex-row ">
               <FontAwesomeIcon
@@ -32,7 +32,7 @@ const OverviewItem: React.FC<propsType> = (props) => {
           )}
         </div>
       ) : (
-        <div className="row w-100  d-inline-flex h6vh align-items-center">
+        <div className="row w-100  d-inline-flex   align-items-center">
           {props.ContentOne ? (
             <div className="col-md-6 d-flex flex-row  ">
               <FontAwesomeIcon

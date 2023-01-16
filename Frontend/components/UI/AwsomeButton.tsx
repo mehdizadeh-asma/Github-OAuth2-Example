@@ -17,7 +17,7 @@ const AwsomeButton = React.forwardRef<HTMLButtonElement, PropsType>(
         type={props.type}
         ref={ref}
         className={
-          "btn ResponsiveBtn pt-1 pb-0 align-self-center text-white w8vw fontsize1rem " +
+          "btn pt-1 pb-0 align-self-center text-white w10vw fontsize102rem ResponsiveBtn " +
           props.ClassName
         }
         onClick={props.onClick}
@@ -25,7 +25,12 @@ const AwsomeButton = React.forwardRef<HTMLButtonElement, PropsType>(
         {props.Icon ? (
           <p>
             {props.Title}
-            {<FontAwesomeIcon className="w1vw ResponsiveIcon" icon={props.Icon} />}
+            {
+              <FontAwesomeIcon
+                className="w105vw ResponsiveIcon"
+                icon={props.Icon}
+              />
+            }
           </p>
         ) : (
           <p className="">{props.Title}</p>

@@ -59,6 +59,9 @@
 .h65vh {
   height: 65vh;
 }
+.h100vh {
+  height: 100%;
+}
 // #endregion
 // #region Width in ViewWidth
 .w3vw {
@@ -94,6 +97,9 @@
 .w8vw {
   width: 8vw;
 }
+.w9vw {
+  width: 9vw;
+}
 .w10vw {
   width: 10vw;
 }
@@ -125,10 +131,19 @@
 .wpx {
   width: 20px;
 }
+.h100px {
+  height: 100px;
+}
+.h55px {
+  min-height: 50px;
+}
 // #endregion
 // #region TextSize in rem & FontFamily
 .fontsize2rem {
   font-size: 2rem;
+}
+.fontsize102rem {
+  font-size: 1.2rem;
 }
 .fontsize103rem {
   font-size: 1.3rem;
@@ -147,6 +162,9 @@
 }
 .fontsize08rem {
   font-size: 0.8rem;
+}
+.fontsize07rem {
+  font-size: 0.7rem;
 }
 .fontsize09rem {
   font-size: 0.85rem;

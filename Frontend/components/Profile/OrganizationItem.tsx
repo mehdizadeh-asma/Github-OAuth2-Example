@@ -6,10 +6,10 @@ interface propsType {
 }
 const OrganizationItem: React.FC<propsType> = (props) => {
   return (
-    <div className="col my-2 mx-1 d-inline-flex border border-1 MainBox">
+    <div className="col my-2 mx-1 d-inline-flex border border-1 MainBox ResponsiveOrg">
       <Image
         id="imgX"
-        className={" align-self-center thumbnail  p-1 w5vw"}
+        className={" align-self-center thumbnail  p-1 ResponsiveOrgIcon w5vw"}
         src={props.MyOrg?.avatar_url}
         alt={props.MyOrg?.login}
       />

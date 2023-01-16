@@ -34,7 +34,7 @@ const Redirect: React.FC = () => {
             width="120vw"
           />
           <AwsomeButton
-            ClassName={`MeetBtn BtnMain BtnGrdPurple  h505vh HoverAndRescaleToWhite`}
+            ClassName={`MeetBtn BtnMain BtnGrdPurple h55px h505vh  HoverAndRescaleToWhite`}
             type="button"
             Title="Meet Github"
             onClick={clickHandler}
