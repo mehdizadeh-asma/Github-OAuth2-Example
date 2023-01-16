@@ -6,7 +6,8 @@ export default function ReposPage() {
   const ctx = useContext(GithubContext);
 
   return (
-    <div className="container">
+    <div   className="container">
+     
       <Repos RepoList={ctx.Repos}></Repos>
     </div>
   );

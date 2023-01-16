@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import GithubContext from "../context/app-context";
 import UserController from "../controller/UserController";
+import Template from "../components/Profile/Template";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -23,9 +24,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <GithubContextProvider>
-      <ProfileContainer>
+      {/* <ProfileContainer> */}
+      <Template>
         <Component {...pageProps} />
-      </ProfileContainer>
+      </Template>
+      {/* </ProfileContainer> */}
     </GithubContextProvider>
   );
 }

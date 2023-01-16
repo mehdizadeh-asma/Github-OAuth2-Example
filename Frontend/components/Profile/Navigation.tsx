@@ -16,25 +16,8 @@ import OverviewItem from "./OverviewItem";
 
 const Navigation: React.FC = () => {
   return (
-    // <Navbar bg="transparent" variant="light">
-    //   <Container>
-    //     <Navbar.Brand className="MenuItem" href="/">
-    //       Meet Github
-    //     </Navbar.Brand>
-    //     <Nav className="me-auto MenuItem">
-    //       <Nav.Link href="/gists">
-    //         gists
-    //         <FontAwesomeIcon className="MenuAwsomeIcon" icon={faCode} />
-    //         <Link href="/gists">Gists</Link>
-    //       </Nav.Link>
-    //       <Nav.Link href="/repos">
-    //         <FontAwesomeIcon className="MenuAwsomeIcon" icon={faBook} />
-    //         <Link href="/repos">reps</Link>
-    //       </Nav.Link>
-    //     </Nav>//
-    //   </Container>
-    // </Navbar>
-    <ul className="nav nav-tabs  rounded-1 mb-1 colorizeLightPurple shadow-sm MenuResponsive">
+    
+    <ul className="nav nav-tabs rounded-1 colorizeLightPurple shadow-sm MenuResponsive">
       <li className="nav-item  DarkPurpleColor">
         <Link
           href="/profile"

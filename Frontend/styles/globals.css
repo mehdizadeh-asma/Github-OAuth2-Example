@@ -79,6 +79,10 @@
   height: 65vh;
 }
 
+.h100vh {
+  height: 100%;
+}
+
 .w3vw {
   width: 3vw;
 }
@@ -123,6 +127,10 @@
   width: 8vw;
 }
 
+.w9vw {
+  width: 9vw;
+}
+
 .w10vw {
   width: 10vw;
 }
@@ -163,8 +171,20 @@
   width: 20px;
 }
 
+.h100px {
+  height: 100px;
+}
+
+.h55px {
+  min-height: 50px;
+}
+
 .fontsize2rem {
   font-size: 2rem;
+}
+
+.fontsize102rem {
+  font-size: 1.2rem;
 }
 
 .fontsize103rem {
@@ -189,6 +209,10 @@
 
 .fontsize08rem {
   font-size: 0.8rem;
+}
+
+.fontsize07rem {
+  font-size: 0.7rem;
 }
 
 .fontsize09rem {
@@ -227,7 +251,7 @@
 
 .BgGrdColorizePurpleBack {
   background: rgb(90, 49, 90); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(rgb(59, 41, 70), rgb(141, 135, 145), rgb(142, 132, 148), rgb(221, 205, 221), rgb(218, 213, 218));
+  background: linear-gradient(rgb(59, 41, 70), rgb(141, 135, 145), rgb(142, 132, 148), rgb(221, 205, 221), rgb(218, 213, 218), rgb(141, 135, 145), rgb(59, 41, 70));
 }
 
 .BtnGrdPurple {
@@ -290,6 +314,26 @@
 
 .TransBg {
   background: rgba(255, 255, 255, 0.3);
+}
+
+.LightRed {
+  color: rgb(253, 170, 170);
+}
+
+.DrkPurpleBorder {
+  border: 2px solid rgb(17, 3, 17);
+}
+
+.SmallProfileBorder {
+  border: 2px solid rgb(167, 149, 167);
+}
+
+.PurpleColor {
+  color: rgb(208, 206, 208);
+}
+
+.DarkOrange {
+  color: #d98507;
 }
 
 .HeadLine {
@@ -409,7 +453,7 @@
   }
   .NavResponsive .Pane {
     width: 51.2vw;
-    margin-left: 2vw;
+    margin-left: 1.8vw;
   }
 }
 @media (min-width: 1300px) {
@@ -431,114 +475,245 @@
   }
   .NavResponsive .Pane {
     width: 51.2vw;
-    margin-left: 2vw;
+    margin-left: 2.15vw;
   }
 }
 @media (max-width: 1200px) {
   .NavResponsive .NavLink {
     width: 25vw;
     height: 5vh;
-    margin-left: 1.1vw;
+    margin-left: 1vw;
   }
   .NavResponsive .Pane {
     width: 51.2vw;
-    margin-left: 2vw;
+    margin-left: 2.1vw;
   }
 }
-@media (max-width: 1160px) {
+@media (max-width: 990px) {
   .NavResponsive .NavLink {
-    width: 22vw;
+    width: 31vw;
     height: 5vh;
-    margin-left: 1.1vw;
-  }
-  .NavResponsive .Pane {
-    width: 45.1vw;
-    margin-left: 2vw;
-  }
-}
-@media (max-width: 850px) {
-  .NavResponsive .NavLink {
-    width: 18vw;
-    height: 5vh;
-    margin-left: 1vw;
-  }
-  .NavResponsive .NavLink .small {
-    font-size: 0.5rem;
-  }
-  .NavResponsive .Pane {
-    width: 37vw;
-    margin-left: 2.5vw;
-  }
-}
-@media (max-width: 750px) {
-  .NavResponsive .NavLink .small {
-    display: none;
-  }
-  .NavResponsive .NavLink .TabAwsomeDiv {
-    display: block;
+    margin-left: 0.4vw;
   }
   .NavResponsive .NavLink .TabAwsomeIcon {
     width: 3vw;
   }
-}
-@media (max-width: 600px) {
-  .NavResponsive .NavLink {
-    width: 8vw;
-    height: 5vh;
-    margin-left: 1vw;
+  .NavResponsive .NavLink .small {
+    font-size: 1rem;
+    margin-left: 15px;
   }
-  .NavResponsive .NavLink .TabAwsomeDiv {
+  .NavResponsive .Pane {
+    width: 63vw;
+    margin-left: 1.8vw;
+  }
+}
+@media (max-width: 799px) {
+  .NavResponsive .NavLink {
+    width: 30vw;
+    height: 40px;
+    margin-left: 0.7vw;
+  }
+  .NavResponsive .NavLink .TabAwsomeIcon {
+    width: 3vw;
+  }
+  .NavResponsive .NavLink .small {
+    font-size: 1rem;
+  }
+  .NavResponsive .Pane {
+    width: 80vw;
+    margin-left: 1.9vw;
+  }
+  .NavResponsive {
+    margin-right: 80px;
+  }
+}
+@media (max-width: 656px) {
+  .NavResponsive .NavLink {
+    width: 33vw;
+    height: 40px;
+    margin-left: 0.5vw;
+  }
+  .NavResponsive .NavLink .TabAwsomeIcon {
+    width: 2.8vw;
+  }
+  .NavResponsive .NavLink .small {
+    font-size: 0.6rem;
+  }
+  .NavResponsive .Pane {
+    width: 80vw;
+    margin-left: 1.9vw;
+  }
+}
+@media (max-width: 576px) {
+  .NavResponsive {
+    margin-right: 20px;
+  }
+  .NavResponsive .NavLink {
+    margin-top: 0;
+    width: 22vw;
+    height: 40px;
+    margin-left: 2vw;
+  }
+  .NavResponsive .NavLink .TabAwsomeIcon {
+    width: 5vw;
+  }
+  .NavResponsive .NavLink .small {
     display: none;
   }
   .NavResponsive .Pane {
-    width: 51.2vw;
-    margin-left: 2vw;
+    width: 60vw;
   }
 }
 
+@media (min-width: 1400px) {
+  .ResponsiveSearch .ResponsiveBtn {
+    font-size: 1.3rem;
+    width: 10vw;
+    height: 5vh;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    width: 1.3vw;
+  }
+  .ResponsiveSearch .ResponsiveInput {
+    width: 35vw;
+  }
+}
+@media (max-width: 1400px) {
+  .ResponsiveSearch .ResponsiveBtn {
+    font-size: 1.2rem;
+    width: 10vw;
+    height: 5vh;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    width: 1.3vw;
+  }
+  .ResponsiveSearch .ResponsiveInput {
+    width: 35vw;
+  }
+}
 @media (max-width: 1100px) {
   .ResponsiveSearch .ResponsiveBtn {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
+    width: auto;
+    height: auto;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    width: 1.3vw;
+  }
+}
+@media (max-width: 978px) {
+  .ResponsiveSearch .ResponsiveBtn {
+    font-size: 1rem;
+    width: 10vw;
+    height: auto;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    width: 1.1vw;
   }
 }
 @media (max-width: 940px) {
   .ResponsiveSearch .ResponsiveIcon {
     display: none;
   }
-}
-@media (max-width: 940px) {
   .ResponsiveSearch .ResponsiveBtn {
-    margin-left: 2vw;
+    width: auto;
+    height: 5vh;
+    min-height: 35px;
   }
-}
-@media (max-width: 765px) {
   .ResponsiveSearch .ResponsiveInput {
-    width: 45vw;
-  }
-  .ResponsiveSearch .ResponsiveBtn {
-    font-size: 0.7rem;
-    width: 13vw;
+    width: 33vw;
+    min-height: 35px;
   }
 }
-@media (max-width: 445px) {
+@media (max-width: 766px) {
   .ResponsiveSearch .ResponsiveInput {
-    width: 45vw;
+    width: 50vw;
+    min-height: 35px;
   }
   .ResponsiveSearch .ResponsiveBtn {
-    font-size: 0.7rem;
-    width: 15vw;
+    font-size: 1rem;
+    width: 16vw;
+    height: 4vh;
+    min-height: 35px;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    display: inline-block;
+    width: 1.5vw;
+  }
+}
+@media (max-width: 630px) {
+  .ResponsiveSearch .ResponsiveBtn {
+    font-size: 0.8rem;
+    width: 26vw;
+    align-self: center;
+    height: 5vh;
+    font-weight: 80%;
+    min-height: 35px;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    display: inline-block;
+    width: 1.5vw;
+  }
+}
+@media (max-width: 578px) {
+  .ResponsiveSearch .ResponsiveInput {
+    width: 65vw;
+    height: 5vh;
+    min-height: 35px;
+  }
+  .ResponsiveSearch .ResponsiveBtn {
+    font-size: 1.2rem;
+    width: 22vw;
+    align-self: center;
+    height: 5vh;
+    font-weight: 80%;
+    min-height: 35px;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    display: inline-block;
+    width: 3vw;
+  }
+}
+@media (max-width: 540px) {
+  .ResponsiveSearch .ResponsiveInput {
+    width: 65vw;
+    height: 6vh;
+    min-height: 35px;
+  }
+  .ResponsiveSearch .ResponsiveBtn {
+    font-size: 1.1rem;
+    width: 30vw;
+    align-self: center;
+    height: 6vh;
+    font-weight: 80%;
+    min-height: 35px;
+  }
+  .ResponsiveSearch .ResponsiveIcon {
+    display: inline-block;
+    width: 3vw;
   }
 }
 
 @media (min-width: 1200px) {
-  .ResponsiveProfileSmall .ResponsiveSmallProfImage {
-    width: 6.5vw;
+  .ResponsiveProfileSmall .ResponsiveProfileSmall {
+    width: 23vw;
   }
-  .ResponsiveProfileSmall .ResponsiveSmallProfText {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
+.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
     font-size: 1rem;
+  }
+  .ResponsiveProfileSmall .ResponsiveSmallProfImage {
+    width: 5vw;
   }
 }
 @media (max-width: 1200px) {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall {
+    width: 30vw;
+  }
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
+.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
+    font-size: 0.8rem;
+  }
   .ResponsiveProfileSmall .ResponsiveSmallProfImage {
     width: 8vw;
   }
@@ -546,31 +721,39 @@
     font-size: 1rem;
   }
 }
-@media (max-width: 970px) {
-  .ResponsiveProfileSmall .ResponsiveSmallProfImage {
-    width: 10vw;
+@media (max-width: 768px) {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall {
+    width: 100%;
   }
-  .ResponsiveProfileSmall .ResponsiveSmallProfText {
-    font-size: 0.8rem;
-    padding-top: 0.5vh;
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
+.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
+    font-size: 1rem;
   }
-}
-@media (max-width: 550px) {
   .ResponsiveProfileSmall .ResponsiveSmallProfImage {
     width: 12vw;
   }
-  .ResponsiveProfileSmall .ResponsiveSmallProfText {
-    font-size: 0.6rem;
-    padding-top: 0.4vh;
+}
+@media (max-width: 576px) {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall {
+    width: 100%;
+  }
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
+.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
+    font-size: 1rem;
+  }
+  .ResponsiveProfileSmall .ResponsiveSmallProfImage {
+    width: 18vw;
   }
 }
 
 @media (min-width: 1200px) {
   .ResponsiveProfileBig {
-    height: 65vh;
+    height: auto;
+    padding-bottom: 30px;
   }
   .ResponsiveProfileBig .ResponsiveBigProfImage {
-    width: 40vw;
+    width: 20vw;
+    border: 1px solid rgb(164, 164, 164);
   }
   .ResponsiveProfileBig .ResponsiveBigProfText {
     font-size: 2rem;
@@ -598,7 +781,8 @@
 }
 @media (max-width: 1200px) {
   .ResponsiveProfileBig {
-    height: 50vh;
+    height: auto;
+    padding-bottom: 30px;
   }
   .ResponsiveProfileBig .ResponsiveBigProfImage {
     width: 40vw;
@@ -629,13 +813,14 @@
 }
 @media (max-width: 1180px) {
   .ResponsiveProfileBig {
-    height: 45vh;
+    height: auto;
+    padding-bottom: 30px;
   }
   .ResponsiveProfileBig .ResponsiveBigProfImage {
-    width: 40vw;
+    width: 18vw;
   }
   .ResponsiveProfileBig .ResponsiveBigProfText {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .ResponsiveProfileBig .ResponsiveFollwer {
     width: 85%;
@@ -644,10 +829,103 @@
     color: #443456;
   }
   .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconTwo {
-    width: 7vw;
+    width: 10vw;
   }
   .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconOne {
-    width: 7vw;
+    width: 10vw;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentOne {
+    text-align: center;
+    font-size: 0.6rem;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentTwo {
+    text-align: center;
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 995px) {
+  .ResponsiveProfileBig {
+    height: 17vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .ResponsiveProfileBig .ImageContainer {
+    width: 50%;
+  }
+  .ResponsiveProfileBig .ImageRow {
+    width: 100%;
+    height: 95%;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentOne {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentTwo {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconTwo {
+    width: 4vw;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconOne {
+    width: 4vw;
+  }
+  .ResponsiveProfileBig .ResponsiveBigProfImage {
+    width: 15vw;
+  }
+  .ResponsiveProfileBig .ResponsiveBigProfText {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 850px) {
+  .ResponsiveProfileBig .ResponsiveBigProfImage {
+    width: 17vw;
+  }
+}
+@media (max-width: 766px) {
+  .ResponsiveProfileBig .ResponsiveBigProfImage {
+    width: 20vw;
+  }
+  .ResponsiveProfileBig .ResponsiveBigProfText {
+    font-size: 1.2rem;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer {
+    text-align: center;
+    width: 100%;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentOne {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1vh;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentTwo {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconTwo {
+    width: 3vw;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconOne {
+    width: 3vw;
+  }
+}
+@media (max-width: 620px) {
+  .ResponsiveProfileBig {
+    height: 150px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    min-height: 50px;
+  }
+  .ResponsiveProfileBig .ResponsiveBigProfImage {
+    width: 20vw;
+  }
+  .ResponsiveProfileBig .ResponsiveBigProfText {
+    font-size: 1rem;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer {
+    text-align: center;
+    width: 100%;
+    height: 62px;
   }
   .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentOne {
     text-align: center;
@@ -657,32 +935,25 @@
     text-align: center;
     font-size: 0.8rem;
   }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconTwo {
+    width: 2.5vw;
+  }
+  .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveIconOne {
+    width: 2.5vw;
+  }
 }
-@media (max-width: 1000px) {
+@media (max-width: 576px) {
   .ResponsiveProfileBig {
-    height: 45vh;
+    height: 330px;
+  }
+  .ResponsiveProfileBig .ImageContainer {
+    width: 100%;
   }
   .ResponsiveProfileBig .ResponsiveBigProfImage {
-    width: 40vw;
+    width: 150px;
   }
-  .ResponsiveProfileBig .ResponsiveBigProfText {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 850px) {
-  .ResponsiveProfileBig {
-    height: 40vh;
-  }
-  .ResponsiveProfileBig .ResponsiveBigProfImage {
-    width: 40vw;
-  }
-  .ResponsiveProfileBig .ResponsiveBigProfText {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 766px) {
   .ResponsiveProfileBig .ResponsiveFollwer {
-    height: 10vh;
+    height: 60px;
   }
   .ResponsiveProfileBig .ResponsiveFollwer .ResponsiveContentOne {
     text-align: center;
@@ -703,6 +974,128 @@
 }
 .MenuResponsive .nav-link:link {
   color: rgb(46, 22, 46);
+}
+.MenuResponsive {
+  min-height: 50px;
+}
+
+@media (max-width: 450px) {
+  .MenuResponsive {
+    height: 125px;
+    text-align: center;
+    justify-content: center;
+  }
+  .MenuResponsive .nav-item {
+    width: 85px;
+  }
+  .MenuResponsive .nav-item .nav-link {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .RepoResponsive .ResponsiveTitle {
+    font-size: smaller;
+  }
+  .RepoResponsive .ResponsiveVisibilty {
+    width: 12vw;
+  }
+}
+@media (max-width: 768px) {
+  .RepoResponsive .ResponsiveDate {
+    font-size: smaller;
+  }
+  .RepoResponsive .ResponsiveTitle {
+    font-size: smaller;
+  }
+  .RepoResponsive .ResponsiveVisibilty {
+    width: 15vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    height: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .RepoResponsive {
+    width: 100%;
+    align-self: center;
+    margin-left: 4vh;
+  }
+  .RepoResponsive .ResponsiveDate {
+    font-size: smaller;
+  }
+  .RepoResponsive .ResponsiveTitle {
+    font-size: small;
+  }
+  .RepoResponsive .ResponsiveVisibilty {
+    font-size: 0.7rem;
+    height: 30px;
+    width: 36vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .ResponsiveOrg .ResponsiveOrgIcon {
+    width: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ResponiveFooter .ResponsiveImageDiv {
+    width: 100%;
+  }
+  .ResponiveFooter .ResponsiveImage {
+    width: 11vw;
+  }
+  .ResponiveFooter .ResponsiveExplore {
+    font-size: 1.5rem;
+  }
+  .ResponiveFooter .ResponsiveDescription {
+    width: 100%;
+  }
+  .ResponiveFooter .ResponsiveGreple {
+    justify-content: center;
+    width: 100%;
+  }
+  .ResponiveFooter .ResponsiveHr {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #divHeader .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+  #divHeader #divSearch {
+    height: 100%;
+  }
+  #divHeader #divProfile {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #divHeader .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+  #divHeader #divSearch {
+    order: 2;
+    height: 50%;
+  }
+  #divHeader #divProfile {
+    order: 1;
+    height: 50%;
+  }
 }
 
 _Responsive * {

@@ -36,19 +36,26 @@
   background: rgb(90, 49, 90); /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    rgb(90, 49, 90),
-    rgb(126, 74, 126),
-    rgb(90, 49, 90)
+    rgb(59, 41, 70),
+    rgb(141, 135, 145),
+    rgb(142, 132, 148),
+    rgb(221, 205, 221),
+    rgb(218, 213, 218),
+    rgb(141, 135, 145),
+    rgb(59, 41, 70)
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     rgb(59, 41, 70),
     rgb(141, 135, 145),
     rgb(142, 132, 148),
     rgb(221, 205, 221),
-    rgb(218, 213, 218)
+    rgb(218, 213, 218),
+    rgb(141, 135, 145),
+    rgb(59, 41, 70)
   );
 }
 
+ 
 // #endregion
 
 .BtnGrdPurple {
@@ -141,4 +148,19 @@
 .TransBg {
   // background: transparentize($color: #fff, $amount: 0.8);
   background: rgba(255, 255, 255, 0.3);
+}
+.LightRed {
+  color: rgb(253, 170, 170);
+}
+.DrkPurpleBorder {
+  border: 2px solid rgb(17, 3, 17);
+}
+.SmallProfileBorder {
+  border: 2px solid rgb(167, 149, 167);
+}
+.PurpleColor {
+  color: rgb(208, 206, 208);
+}
+.DarkOrange{
+  color: #d98507;
 }

@@ -108,7 +108,7 @@ const ProfileContainer = (props: PropsType) => {
         </div>
       </Card>
 
-      <Card className="col w-100 mx-2 px-2 py-2 d-flex flex-row my-1 TransBg   shadow-sm">
+      <Card className="col w-100 mx-2 px-2 py-2 d-flex flex-row my-1 bg-danger   shadow-sm">
         <Card className=" col-sm-3  ResponsiveProfileBig  mx-2 shadow colorizeLightPurple">
           <RoundedProfile
             CssClassPic="mb-1  ResponsiveBigProfImage"
