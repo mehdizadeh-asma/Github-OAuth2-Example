@@ -8,17 +8,7 @@ interface ParamTypes {
 }
 
 const DateShow = (props: ParamTypes) => {
-  const dateArray = dateFormat(props.Date).split(" ");
-  return (
-    <div className={props.CssClass}>
-      {props.Text +
-        " " +
-        dateArray[1] +
-        "  " +
-        dateArray[2] +
-        ", " +
-        dateArray[3]}
-    </div>
-  );
+  const dateText = dateFormat(props.Date, "mmm dd, yyyy");
+  return <div className={props.CssClass}>{props.Text + " " + dateText}</div>;
 };
 export default DateShow;

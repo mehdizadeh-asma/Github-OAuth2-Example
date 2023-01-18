@@ -1,24 +1,22 @@
-import { faPeopleGroup, faPeopleLine } from "@fortawesome/free-solid-svg-icons";
 import Image from "react-bootstrap/Image";
-import OverviewItem from "../Profile/OverviewItem";
 import Card from "react-bootstrap/Card";
 
 interface propsType {
-  PictureUrl?: string;
+  PictureUrl: string;
   Name?: string;
   Username?: string;
   CssClassPic?: string;
   CssClassText?: string;
 }
+
 const RoundedProfileSmall: React.FC<propsType> = (props) => {
   return (
-    //colorizeLightPurple
-    <Card className="ResponsiveProfileSmall shadow   bg-transparent  h100px ">
-      <div className="cantainer-fluid conainer-flex  d-flex justify-content-end me-2  ">
-        <div className="row d-inline-flex  align-items-end ImageRow  ">
-          <div className="col row d-flex flex-column h-100   ">
+    <Card className="ResponsiveProfileSmall shadow bg-transparent h100px">
+      <div className="cantainer-fluid conainer-flex  d-flex justify-content-end me-2">
+        <div className="row d-inline-flex  align-items-end ImageRow">
+          <div className="col row d-flex flex-column h-100">
             <div className="col-12 text-center my-2 ">
-              <p className={`${props.CssClassText} ResponsiveName `}>
+              <p className={`${props.CssClassText} ResponsiveName`}>
                 {props.Name}
               </p>
             </div>
@@ -29,10 +27,10 @@ const RoundedProfileSmall: React.FC<propsType> = (props) => {
             </div>
           </div>
 
-          <div className="col d-flex justify-content-center w-100 ImageContainer  clean  ">
+          <div className="col d-flex justify-content-center w-100 ImageContainer">
             <Image
               id="imgX"
-              className={"img-fluid mx-2 rounded-circle " + props.CssClassPic}
+              className={"img-fluid mx-2 rounded-circle" + props.CssClassPic}
               src={props.PictureUrl}
               alt={props.Username}
             />

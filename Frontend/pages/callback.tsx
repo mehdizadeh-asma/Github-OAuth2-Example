@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import CallbackComponent from "../components/Profile/CallbackComponent";
 import styles from "../styles/Home.module.css";
 

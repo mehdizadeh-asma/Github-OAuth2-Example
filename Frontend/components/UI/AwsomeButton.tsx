@@ -10,6 +10,7 @@ interface PropsType {
   IconClass?: string;
   onClick?: () => void;
 }
+
 const AwsomeButton = React.forwardRef<HTMLButtonElement, PropsType>(
   (props, ref) => {
     return (
@@ -17,7 +18,7 @@ const AwsomeButton = React.forwardRef<HTMLButtonElement, PropsType>(
         type={props.type}
         ref={ref}
         className={
-          "btn pt-1 pb-0 align-self-center text-white w10vw fontsize102rem ResponsiveBtn " +
+          "btn pt-1 pb-0 align-self-center text-white w10vw fontsize102rem ResponsiveBtn" +
           props.ClassName
         }
         onClick={props.onClick}

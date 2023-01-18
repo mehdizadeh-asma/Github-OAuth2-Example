@@ -1,15 +1,15 @@
-import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Spinner from "react-bootstrap/Spinner";
+
 import GithubContext from "../../context/app-context";
 import UserController from "../../controller/UserController";
-import Spinner from "react-bootstrap/Spinner";
-import Link from "next/link";
 import AwsomeButton from "../UI/AwsomeButton";
 
 const CallbackComponent = () => {
   const ctx = useContext(GithubContext);
   const router = useRouter();
-  const [errorText, setErrorText] = useState(null);
+  const [errorText, setErrorText] = useState("");
 
   const code = router.query.code as string;
 
@@ -51,8 +51,8 @@ const CallbackComponent = () => {
         else throw new Error("Context is undefined");
 
         router.push("/profile");
-      } catch (error: any) {
-        setErrorText(error.toString());
+      } catch (error) {
+        setErrorText((error as Error).message);
       }
     };
     AuthorizeUser();

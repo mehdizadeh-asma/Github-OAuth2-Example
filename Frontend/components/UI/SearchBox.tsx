@@ -1,8 +1,9 @@
 import React from "react";
-import AwsomeButton from "./AwsomeButton";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
+import AwsomeButton from "./AwsomeButton";
 
 interface PropsType {
   //Button
@@ -10,7 +11,7 @@ interface PropsType {
   ButtonCss?: string;
   Icon?: IconDefinition;
   IconCssClass?: string;
-  onClick: () => {};
+  onClick: () => void;
   //FlotingInput
   type: string;
   FloatingLabelTitle?: string;
@@ -18,12 +19,13 @@ interface PropsType {
   InputLabelClassName?: string;
   InputClassName?: string;
 }
+
 const SearchBox = React.forwardRef<HTMLInputElement, PropsType>(
   (props, ref) => {
     return (
       <div id="searchbar" className="container-fluid">
         <div className="row">
-          <div className="col-sm-9  ResponsiveSearch ">
+          <div className="col-sm-9  ResponsiveSearch">
             <FloatingLabel
               controlId="floatingInput"
               label="Github Username"
@@ -40,7 +42,7 @@ const SearchBox = React.forwardRef<HTMLInputElement, PropsType>(
               />
             </FloatingLabel>
           </div>
-          <div className="col-sm-3 d-inline-flex justify-content-center ResponsiveSearch ">
+          <div className="col-sm-3 d-inline-flex justify-content-center ResponsiveSearch">
             <AwsomeButton
               type="button"
               Title={props.ButtonTitle}

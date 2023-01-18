@@ -2,40 +2,15 @@
   font-family: $HeaderFont;
   text-align: center;
 }
-// .floatingInput {
-//   height: 3rem !important;
-//   width: 10rem;
-//   min-width: 210px !important;
-// }
 
-.Bgback {
-  background-image: url("/assets/card.webp");
-  background-size: contain;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-}
- 
 .MenuAwsomeIcon {
   width: 0.8rem;
   color: rgb(98, 98, 104);
   margin-left: 5px;
   margin-right: 5px;
-  // border:1px solid gray;
-  // border-radius: 3px;
-  // padding: 2px;
 }
-.MenuItem {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
-  color: rgb(50, 1, 49);
-  border:0px;
-}
+
 .OverviewAwsomeIcon {
+  @extend .MenuAwsomeIcon;
   width: 1rem;
-  color: rgb(98, 98, 104);
-  margin-left: 5px;
-  margin-right: 5px;
-  // border:1px solid gray;
-  // border-radius: 3px;
-  // padding: 2px;
 }

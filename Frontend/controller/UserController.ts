@@ -1,5 +1,5 @@
 import axios from "axios";
-import path from "path";
+
 import Gist from "../models/Gist";
 import Org from "../models/Org";
 import Repo from "../models/Repo";

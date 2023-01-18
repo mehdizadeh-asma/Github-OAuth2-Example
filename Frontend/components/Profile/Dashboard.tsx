@@ -1,24 +1,26 @@
+import { useContext } from "react";
+import { Col, Nav, Row } from "react-bootstrap";
+import Tab from "react-bootstrap/Tab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBoxesStacked,
   faUsersViewfinder,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext } from "react";
-import { Col, Nav, Row } from "react-bootstrap";
-import Tab from "react-bootstrap/Tab";
+
 import GithubContext from "../../context/app-context";
 import Organizations from "./Organizations";
 import Overview from "./Overview";
+
 const Dashboard = () => {
   const ctx = useContext(GithubContext);
 
   return (
-    <div className="row container-fluid container-flex  justify-content-center d-flex  my-3 NavResponsive  ">
+    <div className="row container-fluid container-flex justify-content-center d-flex my-3 NavResponsive ">
       <div className="col-12">
         <Tab.Container defaultActiveKey="overview">
           <Row className="w-100 ">
             <Col className="col  ">
-              <Nav className="w-100 p-0 mx-3    NavContainer ">
+              <Nav className="w-100 p-0 mx-3 NavContainer ">
                 <Nav.Item className="border-0 rounded-1">
                   <Nav.Link
                     className="NavLink shadow BtnGrdPurple HoverRescale border-0 rounded-1 "
@@ -41,13 +43,13 @@ const Dashboard = () => {
                 </Nav.Item>
                 <Nav.Item className="border-0 rounded-1">
                   <Nav.Link
-                    className="NavLink shadow BtnGrdPurple HoverRescale border-0 rounded-1 "
+                    className="NavLink shadow BtnGrdPurple HoverRescale border-0 rounded-1"
                     eventKey="Organization"
                   >
-                    <div className="row d-inline-flex w-100  ">
+                    <div className="row d-inline-flex w-100">
                       <div className=" w2vw col-2 TabAwsomeDiv">
                         <FontAwesomeIcon
-                          className=" w105vw TabAwsomeIcon text-white "
+                          className=" w105vw TabAwsomeIcon text-white"
                           icon={faBoxesStacked}
                         />
                       </div>

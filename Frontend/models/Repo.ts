@@ -3,7 +3,7 @@ interface Repo {
   name: string;
   full_name: string;
   description: string;
-  visibility: string; //public,private
+  visibility: string;
   html_url: string;
   forks_count: string;
   watchers_count: string;

@@ -1,7 +1,7 @@
-import Redirect from "../components/Profile/Redirect";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import Redirect from "../components/Profile/Redirect";
 
 export default function Meet() {
   return (

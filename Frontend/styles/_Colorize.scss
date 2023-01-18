@@ -16,21 +16,7 @@
     rgb(50, 1, 49)
   ) !important;
 }
-.BgGrdColorizeGray {
-  background: rgb(90, 49, 90); /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    rgb(90, 49, 90),
-    rgb(126, 74, 126),
-    rgb(90, 49, 90)
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    rgb(89, 88, 88),
-    rgb(200, 186, 200),
-    rgb(221, 205, 221),
-    rgb(200, 186, 200)
-  );
-}
+ 
 
 .BgGrdColorizePurpleBack {
   background: rgb(90, 49, 90); /* fallback for old browsers */
@@ -112,24 +98,10 @@
     rgb(255, 255, 255)
   );
 }
-
-.DarkGray {
-  color: $MainBarColor;
-}
-.DarkPurpleBorder {
-  border-color: rgb(46, 22, 46);
-  // border-bottom: 2px solid rgb(50, 1, 49);
-  // box-shadow: 3px 3px rgb(37, 36, 36), -1em 0 0.4em olive;
-}
-.BgTransparent50Per {
-  background-color: 50%;
-}
+  
 .LightGray {
   background-color: rgb(252, 246, 255);
-}
-.LightPurple {
-  background-color: rgb(187, 37, 233);
-}
+} 
 .BoxShadowLightPurple {
   box-shadow: 0 2px 2px 0 rgba(130, 133, 139, 0.2),
     0 2px 2px 0 rgba(201, 200, 239, 0.19);
@@ -141,26 +113,13 @@
   color: rgb(46, 22, 46);
   font-weight: 50%;
   font-family: $HeaderFont;
-}
-.LightPurpleBorder {
-  border: 2px solid $ColorLightPurple;
-}
-.TransBg {
-  // background: transparentize($color: #fff, $amount: 0.8);
-  background: rgba(255, 255, 255, 0.3);
-}
+}  
 .LightRed {
   color: rgb(253, 170, 170);
-}
-.DrkPurpleBorder {
-  border: 2px solid rgb(17, 3, 17);
-}
+} 
 .SmallProfileBorder {
   border: 2px solid rgb(167, 149, 167);
 }
 .PurpleColor {
   color: rgb(208, 206, 208);
-}
-.DarkOrange{
-  color: #d98507;
-}
+} 

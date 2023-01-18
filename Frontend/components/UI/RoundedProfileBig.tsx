@@ -1,7 +1,8 @@
 import { faPeopleGroup, faPeopleLine } from "@fortawesome/free-solid-svg-icons";
 import Image from "react-bootstrap/Image";
-import OverviewItem from "../Profile/OverviewItem";
 import Card from "react-bootstrap/Card";
+
+import OverviewItem from "../Profile/OverviewItem";
 
 interface propsType {
   PictureUrl?: string;
@@ -13,21 +14,21 @@ interface propsType {
   following?: string;
   HasFollowerPart: boolean;
 }
-const RoundedProfileNew: React.FC<propsType> = (props) => {
+
+const RoundedProfileBig: React.FC<propsType> = (props) => {
   return (
-    //colorizeLightPurple
-    <Card className="ResponsiveProfileBig border border-2 shadow  colorizeLightPurple my-1">
-      <div className="cantainer-fluid conainer-flex  d-flex justify-content-center  ">
-        <div className="row d-flex  align-items-start ImageRow">
-          <div className="col-3 col-sm-6   col-lg-12 d-flex justify-content-center ImageContainer  clean  ">
+    <Card className="ResponsiveProfileBig border border-2 shadow colorizeLightPurple my-1">
+      <div className="cantainer-fluid conainer-flex d-flex justify-content-center">
+        <div className="row d-flex align-items-start ImageRow">
+          <div className="col-3 col-sm-6 col-lg-12 d-flex justify-content-center ImageContainer">
             <Image
               id="imgX"
-              className={"img-fluid mx-2 rounded-circle " + props.CssClassPic}
+              className={"img-fluid mx-2 rounded-circle" + props.CssClassPic}
               src={props.PictureUrl}
               alt={props.Username}
             />
           </div>
-          <div className="col-sm-6  col-lg-12 d-flex justify-content-center align-self-center  clean  ">
+          <div className="col-sm-6  col-lg-12 d-flex justify-content-center align-self-center">
             <div className="row d-flex flex-column h-100">
               <div className="col-12 h-25">
                 <p className={`${props.CssClassText}  `}>{props.Name}</p>
@@ -39,7 +40,6 @@ const RoundedProfileNew: React.FC<propsType> = (props) => {
                   </small>
                 </p>
               </div>
-
               <div className="col-12 d-flex justify-content-center my-2">
                 {props.HasFollowerPart ? (
                   <div className="border border-1 ResponsiveFollwer">
@@ -63,4 +63,4 @@ const RoundedProfileNew: React.FC<propsType> = (props) => {
   );
 };
 
-export default RoundedProfileNew;
+export default RoundedProfileBig;

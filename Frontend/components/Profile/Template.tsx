@@ -1,4 +1,8 @@
-import UserController from "../../controller/UserController";
+import { useRouter } from "next/router";
+import { Image } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import githubUsernameRegex from "github-username-regex";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import {
   useRef,
   MutableRefObject,
@@ -7,21 +11,18 @@ import {
   useEffect,
   ReactNode,
 } from "react";
-import RoundedProfileNew from "../UI/RoundedProfileNew";
-import Card from "react-bootstrap/Card";
-import SearchBox from "../UI/SearchBox";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import Navigation from "./Navigation";
+
 import GithubContext from "../../context/app-context";
-import githubUsernameRegex from "github-username-regex";
-import { useRouter } from "next/router";
-import RepoItemNew from "../Repo/RepoItemNew";
+import UserController from "../../controller/UserController";
+import Navigation from "./Navigation";
+import SearchBox from "../UI/SearchBox";
+import RoundedProfileBig from "../UI/RoundedProfileBig";
 import RoundedProfileSmall from "../UI/RoundedProfileSmall";
-import { Image } from "react-bootstrap";
 
 interface PropsType {
   children: ReactNode;
 }
+
 const Template = (props: PropsType) => {
   const ctx = useContext(GithubContext);
 
@@ -68,9 +69,8 @@ const Template = (props: PropsType) => {
       else setErrorText("Context is undefined");
 
       setErrorText("");
-      console.log(ctx.User?.name);
-    } catch (error: any) {
-      setErrorText(error.toString());
+    } catch (error) {
+      setErrorText((error as Error).message);
     }
   };
 
@@ -78,13 +78,12 @@ const Template = (props: PropsType) => {
     <div className="container-fluid BgGrdColorizePurpleBack">
       <div
         id="divHeader"
-        className="row flex-container bg-transparent  DarkPurpleColor shadow h-auto clean" //
+        className="row flex-container bg-transparent DarkPurpleColor shadow h-auto"
       >
-        {/* search div */}
         <div
           id="divSearch"
           className="col-md-8  d-flex  justify-content-between justify-content-md-start  
-         align-items-center p-0  clean    h10vh"
+         align-items-center p-0 h10vh"
         >
           <div className="col-9 my-3 d-inline-flex">
             <SearchBox
@@ -101,21 +100,20 @@ const Template = (props: PropsType) => {
           </div>
           <div
             id="errorLabel"
-            className="col  m-3 LightRed fontsize1rem text-left pe-3"
+            className="col m-3 LightRed fontsize1rem text-left pe-3"
           >
             {errorText}
           </div>
         </div>
 
-        {/* profile div */}
         <div
           id="divProfile"
-          className="col-md-4  d-flex justify-content-end align-items-center  p-0 clean "
+          className="col-md-4  d-flex justify-content-end align-items-center p-0"
         >
-          <div className="test w-100 hpx d-flex justify-content-end align-items-center ResponsiveProfileSmall ">
+          <div className="test w-100 hpx d-flex justify-content-end align-items-center ResponsiveProfileSmall">
             <RoundedProfileSmall
               CssClassPic="ResponsiveSmallProfImage mt-1 SmallProfileBorder"
-              CssClassText="my-1 text-left text-white HeaderFont fontsize065rem ResponsiveProfText" //DarkPurpleColor
+              CssClassText="my-1 text-left text-white HeaderFont fontsize065rem ResponsiveProfText"
               Name={ctx.AuthenticatedUser?.name}
               Username={ctx.AuthenticatedUser?.login}
               PictureUrl={ctx.AuthenticatedUser?.avatar_url}
@@ -124,16 +122,13 @@ const Template = (props: PropsType) => {
         </div>
       </div>
 
-      {/*  */}
       <Card className=" bg-transparent bg-info border-0 d-flex flex-row">
-        <div id="divBody" className="row container-fluid  clean  ">
-          {/* 
-        big profile */}
+        <div id="divBody" className="row container-fluid">
           <div
             id="divBigProfile"
-            className="col-lg-3 my-1 ResponsiveProfileBig clean  "
+            className="col-lg-3 my-1 ResponsiveProfileBig"
           >
-            <RoundedProfileNew
+            <RoundedProfileBig
               CssClassPic="my-2  ResponsiveBigProfImage"
               CssClassText="my-1 text-center DarkPurpleColor HeaderFont fontsize065rem ResponsiveBigProfText"
               Name={ctx.User?.name}
@@ -142,33 +137,30 @@ const Template = (props: PropsType) => {
               HasFollowerPart={true}
               followers={ctx.User?.followers + " followers"}
               following={ctx.User?.following + " following"}
-            ></RoundedProfileNew>
+            ></RoundedProfileBig>
           </div>
-          <div
-            id="divDashboard"
-            className="row col-lg-9 d-flex flex-column clean "
-          >
-            <div className="col-12 my-2 mx-2 clean p-0  h-auto  MenuResponsive  ">
+          <div id="divDashboard" className="row col-lg-9 d-flex flex-column">
+            <div className="col-12 my-2 mx-2 p-0 h-auto MenuResponsive">
               <Navigation></Navigation>
             </div>
-            <div className="col-12 h-auto mt-0 mx-2 clean rounded-1 colorizeLightPurple shadow-sm">
+            <div className="col-12 h-auto mt-0 mx-2 rounded-1 colorizeLightPurple shadow-sm">
               {props.children}
             </div>
           </div>
         </div>
       </Card>
       <div className="ResponiveFooter my-5 px-0 mx-0 w-100 h-auto d-flex flex-column">
-        <div className="row mx-3 w-100 d-inline-flex justify-content-between  ">
+        <div className="row mx-3 w-100 d-inline-flex justify-content-between">
           <div className="col-sm-6 d-flex flex-column justify-content-center ResponsiveGreple ">
-            <h5 className="text-warning pt-3 text-center pb-0  ">
+            <h5 className="text-warning pt-3 text-center pb-0">
               Greple Github Challenge
             </h5>
-            <hr className="w-50 ResponsiveHr  align-self-center  border-warning border border-2"></hr>
-            <p className="w-50 mt-1 PurpleColor align-self-center  ResponsiveDescription">
+            <hr className="w-50 ResponsiveHr  align-self-center border-warning border border-2"></hr>
+            <p className="w-50 mt-1 PurpleColor align-self-center ResponsiveDescription">
               Some Explanation about project
             </p>
           </div>
-          <div className="col-sm-6  d-flex justify-content-center ResponsiveImageDiv    ">
+          <div className="col-sm-6  d-flex justify-content-center ResponsiveImageDiv">
             <div className="row d-inline-flex">
               <div className="col-6 d-flex justify-content-end align-items-end">
                 <Image
@@ -179,11 +171,10 @@ const Template = (props: PropsType) => {
                   }
                 ></Image>
               </div>
-              <div className=" mb-2 col-md-6 d-flex justify-content-start  align-items-center PurpleColor">
+              <div className=" mb-2 col-md-6 d-flex justify-content-start align-items-center PurpleColor">
                 <h3 className="ResponsiveExplore">
-                  {" "}
                   Explore The World Of Github
-                </h3>{" "}
+                </h3>
               </div>
             </div>
           </div>

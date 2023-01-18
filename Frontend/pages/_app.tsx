@@ -1,17 +1,13 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import GithubContextProvider from "../context/GithubContextProvider";
-import ProfileContainer from "../components/Profile/ProfileContainer";
 import { useRouter } from "next/router";
-import { useContext } from "react";
-import GithubContext from "../context/app-context";
-import UserController from "../controller/UserController";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "../styles/globals.css";
+import GithubContextProvider from "../context/GithubContextProvider";
 import Template from "../components/Profile/Template";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const ctx = useContext(GithubContext);
 
   if (router.pathname === "/" || router.pathname === "/callback")
     return (
@@ -20,15 +16,11 @@ export default function App({ Component, pageProps }: AppProps) {
       </GithubContextProvider>
     );
 
-  // if (UserController.token === "") window.open("/");
-
   return (
     <GithubContextProvider>
-      {/* <ProfileContainer> */}
       <Template>
         <Component {...pageProps} />
       </Template>
-      {/* </ProfileContainer> */}
     </GithubContextProvider>
   );
 }

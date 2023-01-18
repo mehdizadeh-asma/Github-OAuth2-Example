@@ -1,10 +1,7 @@
 // #region Height in ViewHeight
 .h50vh {
   height: 50vh;
-}
-.h75vh {
-  height: 75vh;
-}
+} 
 .h90vh {
   height: 90vh;
 }
@@ -134,8 +131,11 @@
 .h100px {
   height: 100px;
 }
-.h55px {
+.hMin50px {
   min-height: 50px;
+}
+.hMin75per {
+  min-height: 75%;
 }
 // #endregion
 // #region TextSize in rem & FontFamily
@@ -182,7 +182,5 @@
 .TahomaFont {
   font-family: Tahoma;
 }
-.hMin75per {
-  min-height: 75%;
-}
+
 // #endregion

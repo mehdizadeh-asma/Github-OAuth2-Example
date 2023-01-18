@@ -1,15 +1,17 @@
 import { Image } from "react-bootstrap";
+
 import Org from "../../models/Org";
 
 interface propsType {
   MyOrg?: Org;
 }
+
 const OrganizationItem: React.FC<propsType> = (props) => {
   return (
     <div className="col my-2 mx-1 d-inline-flex border border-1 MainBox ResponsiveOrg">
       <Image
         id="imgX"
-        className={" align-self-center thumbnail  p-1 ResponsiveOrgIcon w5vw"}
+        className={" align-self-center thumbnail p-1 ResponsiveOrgIcon w5vw"}
         src={props.MyOrg?.avatar_url}
         alt={props.MyOrg?.login}
       />
@@ -21,9 +23,6 @@ const OrganizationItem: React.FC<propsType> = (props) => {
           {props.MyOrg?.description}
         </dd>
       </dl>
-      {/* <h5 className="w-100 mx-2 justify-content-start">{props.Login}</h5>
-      <h5 className="w-100 mx-2 justify-content-start">{props.Login}</h5>
-       + */}
     </div>
   );
 };

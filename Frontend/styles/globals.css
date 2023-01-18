@@ -3,10 +3,6 @@
   height: 50vh;
 }
 
-.h75vh {
-  height: 75vh;
-}
-
 .h90vh {
   height: 90vh;
 }
@@ -175,8 +171,12 @@
   height: 100px;
 }
 
-.h55px {
+.hMin50px {
   min-height: 50px;
+}
+
+.hMin75per {
+  min-height: 75%;
 }
 
 .fontsize2rem {
@@ -235,33 +235,62 @@
   font-family: Tahoma;
 }
 
-.hMin75per {
-  min-height: 75%;
-}
-
 .BgGrdColorizePurple {
-  background: rgb(90, 49, 90); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(30deg, rgb(50, 1, 49), rgb(90, 49, 90), rgb(126, 74, 126), rgb(90, 49, 90), rgb(50, 1, 49)) !important;
-}
-
-.BgGrdColorizeGray {
-  background: rgb(90, 49, 90); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(rgb(89, 88, 88), rgb(200, 186, 200), rgb(221, 205, 221), rgb(200, 186, 200));
+  background: rgb(
+    90,
+    49,
+    90
+  ); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    30deg,
+    rgb(50, 1, 49),
+    rgb(90, 49, 90),
+    rgb(126, 74, 126),
+    rgb(90, 49, 90),
+    rgb(50, 1, 49)
+  ) !important;
 }
 
 .BgGrdColorizePurpleBack {
-  background: rgb(90, 49, 90); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(rgb(59, 41, 70), rgb(141, 135, 145), rgb(142, 132, 148), rgb(221, 205, 221), rgb(218, 213, 218), rgb(141, 135, 145), rgb(59, 41, 70));
+  background: rgb(
+    90,
+    49,
+    90
+  ); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    rgb(59, 41, 70),
+    rgb(141, 135, 145),
+    rgb(142, 132, 148),
+    rgb(221, 205, 221),
+    rgb(218, 213, 218),
+    rgb(141, 135, 145),
+    rgb(59, 41, 70)
+  );
 }
 
 .BtnGrdPurple {
   background: #4e54c8; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, rgb(90, 49, 90), rgb(126, 74, 126), rgb(90, 49, 90));
+  background: linear-gradient(
+    to right,
+    rgb(90, 49, 90),
+    rgb(126, 74, 126),
+    rgb(90, 49, 90)
+  );
 }
 
 .BtnGrdOrange {
-  background: rgb(199, 126, 9); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, rgb(199, 126, 9), rgb(232, 170, 69), rgb(228, 168, 71), rgb(197, 125, 9));
+  background: rgb(
+    199,
+    126,
+    9
+  ); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgb(199, 126, 9),
+    rgb(232, 170, 69),
+    rgb(228, 168, 71),
+    rgb(197, 125, 9)
+  );
 }
 
 .colorizeLightPurple {
@@ -270,32 +299,27 @@
 }
 
 .colorizeLightx {
-  background: rgb(254, 243, 225); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, rgb(252, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
-}
-
-.DarkGray {
-  color: #203034;
-}
-
-.DarkPurpleBorder {
-  border-color: rgb(46, 22, 46);
-}
-
-.BgTransparent50Per {
-  background-color: 50%;
+  background: rgb(
+    254,
+    243,
+    225
+  ); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgb(252, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  );
 }
 
 .LightGray {
   background-color: rgb(252, 246, 255);
 }
 
-.LightPurple {
-  background-color: rgb(187, 37, 233);
-}
-
 .BoxShadowLightPurple {
-  box-shadow: 0 2px 2px 0 rgba(130, 133, 139, 0.2), 0 2px 2px 0 rgba(201, 200, 239, 0.19);
+  box-shadow: 0 2px 2px 0 rgba(130, 133, 139, 0.2),
+    0 2px 2px 0 rgba(201, 200, 239, 0.19);
 }
 
 .DarkPurpleColor {
@@ -308,20 +332,8 @@
   font-family: "Oswald";
 }
 
-.LightPurpleBorder {
-  border: 2px solid #f7f3fd;
-}
-
-.TransBg {
-  background: rgba(255, 255, 255, 0.3);
-}
-
 .LightRed {
   color: rgb(253, 170, 170);
-}
-
-.DrkPurpleBorder {
-  border: 2px solid rgb(17, 3, 17);
 }
 
 .SmallProfileBorder {
@@ -332,20 +344,9 @@
   color: rgb(208, 206, 208);
 }
 
-.DarkOrange {
-  color: #d98507;
-}
-
 .HeadLine {
   font-family: "Oswald";
   text-align: center;
-}
-
-.Bgback {
-  background-image: url("/assets/card.webp");
-  background-size: contain;
-  background-position: bottom center;
-  background-repeat: no-repeat;
 }
 
 .MenuAwsomeIcon {
@@ -353,13 +354,6 @@
   color: rgb(98, 98, 104);
   margin-left: 5px;
   margin-right: 5px;
-}
-
-.MenuItem {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
-  color: rgb(50, 1, 49);
-  border: 0px;
 }
 
 .OverviewAwsomeIcon {
@@ -380,11 +374,44 @@
   border-radius: 3px;
 }
 
-.HoverRescale, .HoverAndRescaleToWhite {
+@media screen and (min-width: 768px) {
+  #divHeader .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+  #divHeader #divSearch {
+    height: 100%;
+  }
+  #divHeader #divProfile {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #divHeader .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+  #divHeader #divSearch {
+    order: 2;
+    height: 50%;
+  }
+  #divHeader #divProfile {
+    order: 1;
+    height: 50%;
+  }
+}
+
+.HoverRescale,
+.HoverAndRescaleToWhite {
   transition: transform scale 1s;
   transition-timing-function: linear;
 }
-.HoverRescale:hover, .HoverAndRescaleToWhite:hover {
+.HoverRescale:hover,
+.HoverAndRescaleToWhite:hover {
   transform: scale(1.05, 1.05);
 }
 
@@ -699,7 +726,7 @@
     width: 23vw;
   }
   .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
-.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
     font-size: 1rem;
   }
   .ResponsiveProfileSmall .ResponsiveSmallProfImage {
@@ -711,7 +738,7 @@
     width: 30vw;
   }
   .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
-.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
     font-size: 0.8rem;
   }
   .ResponsiveProfileSmall .ResponsiveSmallProfImage {
@@ -726,7 +753,7 @@
     width: 100%;
   }
   .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
-.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
     font-size: 1rem;
   }
   .ResponsiveProfileSmall .ResponsiveSmallProfImage {
@@ -738,7 +765,7 @@
     width: 100%;
   }
   .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveUserLabel,
-.ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
+  .ResponsiveProfileSmall .ResponsiveProfileSmall .ResponsiveName {
     font-size: 1rem;
   }
   .ResponsiveProfileSmall .ResponsiveSmallProfImage {
@@ -1067,37 +1094,6 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  #divHeader .flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    flex-wrap: wrap;
-  }
-  #divHeader #divSearch {
-    height: 100%;
-  }
-  #divHeader #divProfile {
-    height: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  #divHeader .flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    flex-wrap: wrap;
-  }
-  #divHeader #divSearch {
-    order: 2;
-    height: 50%;
-  }
-  #divHeader #divProfile {
-    order: 1;
-    height: 50%;
-  }
-}
-
 _Responsive * {
   box-sizing: border-box;
   padding: 0;
@@ -1114,4 +1110,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}/*# sourceMappingURL=globals.css.map */
+} /*# sourceMappingURL=globals.css.map */
