@@ -6,7 +6,7 @@ import { Octokit } from "@octokit/core";
 import Helper from "../utils/Helper";
 
 class UserController {
-  static authorizeUser: RequestHandler = async (req, res, next) => {
+  static AuthorizeUser: RequestHandler = async (req, res, next) => {
     try {
       const code = req.params.code;
 
@@ -33,6 +33,7 @@ class UserController {
       next(error);
     }
   };
+
   static GetAuthenticatedUser: RequestHandler = async (req, res, next) => {
     try {
       if (!req.headers["authorization"] || req.headers["authorization"] === "")
@@ -56,7 +57,6 @@ class UserController {
     }
   };
 
-  //
   static GetUser: RequestHandler = async (req, res, next) => {
     try {
       const username = req.params.username;
