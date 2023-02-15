@@ -19,6 +19,6 @@ Include Responsive Interface consisting of an input to enter the username, one a
 ### Specifications
 
 - used JavaScript, TypeScript, NodeJS, ExpressJS, React, Nextjs, Bootstrap, React-Bootstrap, and Sass.
-- The test results are uploaded on a public code repository hosted on either Github or Gitlab
-- The docker image is built and push into Docker Hub
+- The test results are uploaded.
+- The docker image is built and pushed into Docker Hub
 
